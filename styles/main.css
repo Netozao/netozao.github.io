@@ -1,7 +1,5 @@
 /* CIT 230 - Assignment Portal CSS */
-/* You may use #HEX or color names */
 
-/* * is a wildcard referring to all elements. */
 * { margin: 0; box-sizing: border-box; } 
 
 body { 
@@ -10,18 +8,15 @@ body {
     font-family: sans-serif; /* Ubuntu, sans-serif */;
     color: #000; /* #xxxxxx */;
 }
-
 h1 {
     font-size: 2.4rem /* x.xrem  (rem is a unit of measure) */;
     color: #fff; /* #xxxxxx */;
 }
-
 h2 {
     font-size: 1.5rem; /* x.xrem */;
     text-align: center;
     border-bottom: 1px solid #bbb;
 }
-
 header, main, footer {
     margin: 1.25rem auto;
     padding: .5rem;
@@ -33,25 +28,19 @@ header, footer, footer a {
     color: whitesmoke;
     /* Comment */
 }
-
 header img {
     width: 20%; /*  */;
     height: auto;
     float: right;
 }
-
-
-
 footer {
     font-size: smaller; /* smaller */;
 }
-
 ul {
     /* text-align: center; */
     margin: 0 auto;
     max-width: 600px;
 }
-
 #lastModified {
     font-size: 75%;
 }
