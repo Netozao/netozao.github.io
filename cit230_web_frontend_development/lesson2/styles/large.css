@@ -1,25 +1,25 @@
-@media only screen and (min-width: 32.5em) {
+@media only screen and (min-width: 64em) {
     h1 {
-        font-size: 2.0rem;
+        font-size: 2.4rem;
         text-align: center;
     }
     h2 {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
         text-align: center;
     }
     h3 {
-        font-size: 1.0rem;
-        text-align: center;
+        font-size: 1.2rem;
+        text-align: center;  
     }
     section img {
-        width: 40%;
+        width: 30%;
         padding: .5rem;
         display: block;
         margin-left: auto;
         margin-right: auto;
     }
     body { 
-        font-size: 14px; 
+        font-size: 16px; 
         line-height: 32px;
         font-family: 'Rubik', sans-serif;
         /* font-family: sans-serif; */
