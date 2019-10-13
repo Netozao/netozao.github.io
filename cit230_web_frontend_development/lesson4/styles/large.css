@@ -20,6 +20,18 @@
         height: auto;
     }
 
+    section {
+        max-width: 760px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    footer {
+        max-width: 760px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     .navigation {
         text-transform: uppercase;
     }

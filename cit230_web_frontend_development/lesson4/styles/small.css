@@ -2,7 +2,7 @@
 nav {
     margin: 0 auto;
     /* max-width: 760px; */
-    background-color: black;
+    background-color: #31323A;
 }
 
 header div img {
@@ -37,7 +37,7 @@ header div img {
 }
 
 .navigation a:hover {
-    color: black;
+    color: #31323A;
     background-color: white;
     font-weight: 700;
 }
@@ -64,6 +64,7 @@ header div img {
 
 .active {
     background-color: white;
+    color: black;
     font-weight: 700;
 }
 
@@ -77,4 +78,34 @@ h3 {
 
 p {
     font-family: cursive, Arial, sans-serif;
+}
+
+section {
+    background-color: #FCF8E2;
+    /* border: 1px black double; */
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 10px;
+}
+
+section div p {
+    background-color: #FCF8E2;
+    border: 1px black double;
+    margin: 5px;
+    padding: 10px;
+    ;
+}
+
+
+/* Footer */
+footer {
+    background-color: #31323A;
+    text-align: center;
+    margin: 0px;
+    padding: 8px;
+    color: #FF0000;
+}
+
+footer p {
+    margin: 5px;
 }
