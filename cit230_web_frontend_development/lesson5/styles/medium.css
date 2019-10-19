@@ -43,4 +43,14 @@
     .forecast {
         display: block;
     }
+
+    #article-image {
+        width: 150px;
+        height: auto;
+        float: right;
+    }
+
+    .contact-text {
+        text-align: center;
+    }
 }

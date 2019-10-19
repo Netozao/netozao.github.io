@@ -40,4 +40,26 @@
         display: block;
     }
 
+    #article-image {
+        display: block;
+        width: 208px;
+        height: auto;
+        float: right;
+    }
+
+    .contact-large {
+        display: grid;
+    }
+
+    .google-iframe {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .contact-text {
+        grid-column: 2-3;
+        grid-row: 1;
+        align-self: center;
+    }
+
 }

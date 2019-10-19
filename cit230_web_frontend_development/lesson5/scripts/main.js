@@ -20,3 +20,7 @@ for (i = 1; i < 6; i++) {
         document.getElementById("day" + i).innerHTML = day[currentDate.getDay() + (i - 1) - 7];
     }
 }
+
+if (currentDate.getDay() == 5) {
+    document.getElementById("pancake").removeAttribute("class", "hidden");
+}
