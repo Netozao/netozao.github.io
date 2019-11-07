@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Storm Center</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/large.css">
+</head>
+
+<body>
+    <header>
+        <div><img class="header-img" src="images/header.png" alt="Website logo - colored umbrella"></div>
+        <nav>
+            <ul class="navigation">
+                <li><a href="#" class="green" onclick="toggleMenu()">☰ MENU</a></li>
+                <li><a href="#" class="yellow">Home</a></li>
+                <li><a href="preston-8.html" class="blue">Preston</a></li>
+                <li><a href="#" class="red">Soda Springs</a></li>
+                <li><a href="#" class="green">Fish Haven</a></li>
+                <li><a href="stormcenter.html" class="active" class="yellow">Storm Center</a></li>
+                <li><a href="gallery-8.html" class="blue">Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- The method only is GET because github will not accept POST -->
+        <form action="thanks.html" method="GET">
+            <div>
+                <label for="fullName">Full Name: </label>
+                <input type="text" id="fullName" name="fullName" required>
+            </div>
+            <div>
+                <label for="email">Email: </label>
+                <input type="email" id="email" name="email" placeholder="user@email.com">
+            </div>
+            <div>
+                <label for="phone">Phone: </label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div>
+                <label for="zipCode">Zip Code: </label>
+                <input type="number" id="zipCode" name="zipCode" required>
+            </div>
+            <div>
+                <label for="stormDate">Storm Date: </label>
+                <input type="date" id="stormDate" name="stormDate">
+            </div>
+            <div>
+                <label for="stormType">Storm Type</label>
+                <input list="stormType">
+                <datalist id="stormType">
+                    <option value="Flash Flood">
+                    <option value="Hail">
+                    <option value="Hurricane">
+                    <option value="Thunderstom">
+                    <option value="Tornado">
+                </datalist>
+            </div>
+            <div>
+                <label for="stormSeverity">Storm Severity: </label>
+                <input type="range" id="stormSeverity" name="stormSeverity" min="1" max="10">
+            </div>
+            <div>
+                <label for="stormSeverity">Storm Severity: </label>
+                <input type="submit" value="submit">
+            </div>
+    </main>
+
+    <footer>
+        <p><span class="yellow">&copy; Weather4Kids</span> | <span class="blue"> Andre Neto</span></p>
+        <p><span id="currentDate" class="green"></span> </p>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/windchill.js"></script>
+</body>
+
+</html>
