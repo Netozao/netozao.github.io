@@ -248,6 +248,11 @@ section figure img[data-src] {
 form {
     max-width: 750px;
     margin: 0 auto;
+    padding: 10px;
+    background: #fff331;
+    background: -moz-linear-gradient(left, #fff331 0%, #fff331 0%, #16ff6e 50%, #299bff 100%);
+    background: -webkit-linear-gradient(left, #fff331 0%, #fff331 0%, #16ff6e 50%, #299bff 100%);
+    background: linear-gradient(to right, #fff331 0%, #fff331 0%, #16ff6e 50%, #299bff 100%);
 }
 
 label {
