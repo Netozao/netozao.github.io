@@ -76,7 +76,9 @@ h3 {
     font-family: 'Londrina Shadow', Arial, sans-serif;
 }
 
-p {
+p,
+form,
+label {
     font-family: cursive, Arial, sans-serif;
 }
 
@@ -246,4 +248,38 @@ section figure img[data-src] {
 form {
     max-width: 750px;
     margin: 0 auto;
+}
+
+label {
+    display: inline-block;
+    min-width: 120px;
+}
+
+form div {
+    margin-bottom: 5px;
+}
+
+.flex {
+    display: flex;
+}
+
+.nomargin {
+    margin: 3px;
+}
+
+#align-top {
+    vertical-align: top;
+}
+
+.flexly {
+    display: flex;
+    align-items: center;
+}
+
+#ratingvalue {
+    margin: 0 15px;
+}
+
+#rating {
+    margin-left: 60px;
 }
