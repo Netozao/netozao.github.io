@@ -25,7 +25,16 @@ header div img {
 
 .navigation li {
     display: none;
+}
 
+.active {
+    color: black;
+}
+
+.navigation li:hover {
+    color: #31323A;
+    background-color: rgba(255, 255, 255, 0.9);
+    font-weight: 700;
 }
 
 .navigation a {
@@ -37,7 +46,6 @@ header div img {
 
 .navigation a:hover {
     color: #31323A;
-    background-color: rgba(255, 255, 255, 0.7);
     font-weight: 700;
 }
 
@@ -62,8 +70,7 @@ header div img {
 }
 
 .active {
-    background-color: rgba(255, 255, 255, 0.7);
-    ;
+    background-color: rgba(255, 255, 255, 0.9);
     color: black;
     font-weight: 700;
 }
@@ -101,11 +108,8 @@ section {
 }
 
 .hero {
-    background: #299bff;
-    background: -moz-linear-gradient(left, #299bff 0%, #16ff6e 50%, #fff331 100%);
-    background: -webkit-linear-gradient(left, #299bff 0%, #16ff6e 50%, #fff331 100%);
-    background: linear-gradient(to right, #299bff 0%, #16ff6e 50%, #fff331 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#299bff', endColorstr='#fff331', GradientType=1);
+    -webkit-box-shadow: 0px 0px 10px 6px #299BFF, 0px 0px 45px 6px #FFF331, 0px 0px 30px 6px #16FF6E;
+    box-shadow: 0px 0px 10px 6px #299BFF, 0px 0px 45px 6px #FFF331, 0px 0px 30px 6px #16FF6E;
     color: black;
     background-position: center;
     background-repeat: no-repeat;
@@ -248,7 +252,7 @@ section figure img[data-src] {
 form {
     max-width: 750px;
     margin: 0 auto;
-    padding: 10px;
+    padding: 40px;
     background: #fff331;
     background: -moz-linear-gradient(left, #fff331 0%, #fff331 0%, #16ff6e 50%, #299bff 100%);
     background: -webkit-linear-gradient(left, #fff331 0%, #fff331 0%, #16ff6e 50%, #299bff 100%);
@@ -287,4 +291,37 @@ form div {
 
 #rating {
     margin-left: 60px;
+}
+
+/* Temperature Data age */
+#tempGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    text-align: center;
+    /* font-size: 18px; */
+}
+
+p img {
+    max-width: 248px;
+}
+
+section article div {
+    min-height: 34px;
+    margin-top: -20px;
+    font-size: 15px;
+    padding: 0px 2px;
+
+}
+
+#mainArticle1 {
+    background-color: rgb(22, 255, 110, 0.7);
+}
+
+#mainArticle2 {
+    background-color: rgb(255, 243, 49, 0.7);
+}
+
+#mainArticle3 {
+    background-color: rgb(41, 155, 255, 0.7)
 }

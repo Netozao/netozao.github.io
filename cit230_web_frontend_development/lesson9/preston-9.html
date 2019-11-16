@@ -19,12 +19,12 @@
         <nav>
             <ul class="navigation">
                 <li><a href="#" class="green" onclick="toggleMenu()">☰ MENU</a></li>
-                <li><a href="#" class="yellow">Home</a></li>
-                <li><a href="preston-8.html" class="active" class="blue">Preston</a></li>
+                <li><a href="index.html" class="yellow">Home</a></li>
+                <li class="active"><a href="preston-9.html">Preston</a></li>
                 <li><a href="#" class="red">Soda Springs</a></li>
                 <li><a href="#" class="green">Fish Haven</a></li>
                 <li><a href="stormcenter.html" class="yellow">Storm Center</a></li>
-                <li><a href="gallery-8.html" class="blue">Gallery</a></li>
+                <li><a href="gallery-9.html" class="blue">Gallery</a></li>
             </ul>
         </nav>
     </header>
@@ -36,9 +36,10 @@
             </section>
             <section class="hero">
                 <picture>
-                    <source media="(min-width: 1024px)" class="hero-image" srcset="images/backgroundherolarge.jpg">
-                    <source media="(min-width: 520px)" class="hero-image" srcset="images/backgroundheromedium.jpg">
-                    <img src="images/backgroundherosmall.jpg" class="hero-image" alt="Small Picture">
+                    <source media="(min-width: 1024px)" class="hero-image" srcset="images/hero-image.jpg">
+                    <source media="(min-width: 520px)" class="hero-image" srcset="images/hero-image.jpg">
+                    <img src="images/hero-image.jpg" class="hero-image"
+                        alt="Small/Medium/Large hero picture - Child playing at Snow">
                 </picture>
                 <!-- <img src="images/hero-image.jpg" class="hero-image" alt="Kid playing at Snow"> -->
                 <div class="hero-text">
@@ -49,6 +50,7 @@
                     <p>Humidity: <span id="humidity"></span></p>
                 </div>
             </section>
+            <br>
             <section class="forecast">
                 <h2>5-day Forecast</h2>
                 <table>

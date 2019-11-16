@@ -58,4 +58,9 @@
     #gallery {
         grid-template-columns: 1fr 1fr;
     }
-}
+
+    /* Temperature Data age */
+
+    #tempGrid {
+        grid-template-columns: 1fr 1fr;
+    }
