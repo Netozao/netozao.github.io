@@ -127,14 +127,20 @@ section {
 
 .hero-text {
     padding: 5px;
-    text-align: center;
+    text-align: left;
     position: absolute;
     top: 48%;
     left: 80%;
     transform: translate(-50%, -50%);
     color: black;
-    background-color: rgba(247, 247, 247, 0.3);
+    background-color: rgba(164, 160, 160, 0.2);
     width: 200px;
+}
+
+.hero-text h2,
+p {
+    margin: 3px;
+    padding: 3px;
 }
 
 .hidden {
@@ -151,14 +157,26 @@ section {
     padding-bottom: 20px;
 }
 
+th,
+td {
+    border: 1.5px solid black;
+
+}
+
 section table,
 tr,
 th,
 td {
-    border-style: double;
     margin: 0 auto;
     padding: 5px;
+    text-align: center;
+    vertical-align: center;
 }
+
+td>p {
+    margin-top: 2px;
+}
+
 
 .article-box {
     background: #299bff;

@@ -29,11 +29,13 @@
         </nav>
     </header>
     <main>
+        <input type="hidden" id="cityID" value="5604473">
         <h1>Preston, Idaho</h1>
         <div class=sections>
             <section id="pancake" class="hidden">
                 <p>Saturday = Preston Pancakes in the Park! 9:00 a.m. Saturday at the city park pavilion.</p>
             </section>
+            <br>
             <section class="hero">
                 <picture>
                     <source media="(min-width: 1024px)" class="hero-image" srcset="images/hero-image.jpg">
@@ -44,10 +46,11 @@
                 <!-- <img src="images/hero-image.jpg" class="hero-image" alt="Kid playing at Snow"> -->
                 <div class="hero-text">
                     <h2>Weather Summary</h2>
-                    <p>Currently: <span id="currentTemp"></span></p>
-                    <p>Wind Speed: <span id="windSpeed"></span></p>
+                    <p>Currently: <span id="currentTemp"></span> | <span id="currentDesc"></span></p>
+                    <p>High: <span id="high"></span></p>
                     <p>Wind Chill: <span id="windChill"></span></p>
                     <p>Humidity: <span id="humidity"></span></p>
+                    <p>Wind Speed: <span id="windSpeed"></span></p>
                 </div>
             </section>
             <br>
@@ -63,12 +66,22 @@
                         <th id="day5"></th>
                     </tr>
                     <tr>
-                        <td>Forecast</td>
-                        <td id="data1">12&deg;</td>
-                        <td id="data2">13&deg;</td>
-                        <td id="data3">14&deg;</td>
-                        <td id="data4">15&deg;</td>
-                        <td id="data5">11&deg;</td>
+                        <td><strong>Forecast</strong></td>
+                        <td> <img id="forecastIcon1">
+                            <p id="temp1"></p>
+                        </td>
+                        <td> <img id="forecastIcon2">
+                            <p id="temp2"></p>
+                        </td>
+                        <td> <img id="forecastIcon3">
+                            <p id="temp3"></p>
+                        </td>
+                        <td> <img id="forecastIcon4">
+                            <p id="temp4"></p>
+                        </td>
+                        <td> <img id="forecastIcon5">
+                            <p id="temp5"></p>
+                        </td>
                     </tr>
                 </table>
             </section>
@@ -106,6 +119,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
     <script src="scripts/main.js"></script>
     <script src="scripts/windchill.js"></script>
+    <script src="scripts/five-day-forecast.js"></script>
 </body>
 
 </html>
