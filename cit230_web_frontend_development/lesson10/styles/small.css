@@ -324,12 +324,11 @@ p img {
     max-width: 248px;
 }
 
-section article div {
+section article div h4 {
     min-height: 34px;
     margin-top: -20px;
     font-size: 15px;
     padding: 0px 2px;
-
 }
 
 #mainArticle1 {
