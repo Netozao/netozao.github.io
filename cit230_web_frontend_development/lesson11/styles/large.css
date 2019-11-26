@@ -63,14 +63,13 @@
         align-self: center;
         text-align: left;
     }
-}
 
-#gallery {
-    grid-template-columns: 1fr 1fr 1fr;
-}
+    #gallery {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 
-/* Temperature Data age */
-#tempGrid {
-    grid-template-columns: 1fr 1fr 1fr;
-
+    /* Temperature Data age */
+    #tempGrid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }

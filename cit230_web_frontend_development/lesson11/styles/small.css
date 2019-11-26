@@ -317,7 +317,6 @@ form div {
     grid-template-columns: 1fr;
     grid-gap: 10px;
     text-align: center;
-    /* font-size: 18px; */
 }
 
 p img {
