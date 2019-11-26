@@ -199,11 +199,12 @@ td>p {
 }
 
 .contact-info {
-    background: #fff331;
-    background: -moz-linear-gradient(left, #fff331 0%, #fff331 0%, #16ff6e 50%, #299bff 100%);
-    background: -webkit-linear-gradient(left, #fff331 0%, #fff331 0%, #16ff6e 50%, #299bff 100%);
-    background: linear-gradient(to right, #fff331 0%, #fff331 0%, #16ff6e 50%, #299bff 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff331', endColorstr='#299bff', GradientType=1);
+    background: #299bff;
+    background: -moz-linear-gradient(left, #299bff 0%, #16ff6e 50%, #fff331 100%);
+    background: -webkit-linear-gradient(left, #299bff 0%, #16ff6e 50%, #fff331 100%);
+    background: linear-gradient(to right, #299bff 0%, #16ff6e 50%, #fff331 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#299bff', endColorstr='#fff331', GradientType=1);
+    color: black;
 }
 
 .contact-text {
@@ -340,4 +341,18 @@ section article div h4 {
 
 #mainArticle3 {
     background-color: rgb(41, 155, 255, 0.7)
+}
+
+.events {
+    background: #fff331;
+    background: -moz-linear-gradient(left, #fff331 0%, #fff331 0%, #16ff6e 50%, #299bff 100%);
+    background: -webkit-linear-gradient(left, #fff331 0%, #fff331 0%, #16ff6e 50%, #299bff 100%);
+    background: linear-gradient(to right, #fff331 0%, #fff331 0%, #16ff6e 50%, #299bff 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff331', endColorstr='#299bff', GradientType=1);
+}
+
+#eventsPreston,
+#eventsFishHaven,
+#eventsSodaSprings {
+    text-align: center;
 }
