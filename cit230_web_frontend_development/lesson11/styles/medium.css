@@ -1,5 +1,5 @@
-/* Media Query for large + screens */
-@media only screen and (min-width: 64em) {
+/* Media Query for medium screens */
+@media only screen and (min-width: 32.5em) {
     .navigation {
         display: flex;
     }
@@ -16,8 +16,12 @@
     .header-img {
         margin-left: auto;
         margin-right: auto;
-        width: 760px;
+        width: 500px;
         height: auto;
+    }
+
+    .navigation {
+        text-transform: capitalize;
     }
 
     section {
@@ -41,36 +45,22 @@
     }
 
     #article-image {
-        display: block;
-        width: 208px;
+        width: 150px;
         height: auto;
         float: right;
-        margin-top: -60px;
-    }
-
-    .contact-large {
-        display: grid;
-    }
-
-    .google-iframe {
-        grid-column: 1;
-        grid-row: 1;
+        margin-top: -20px;
     }
 
     .contact-text {
-        grid-column: 2-3;
-        grid-row: 1;
-        align-self: center;
-        text-align: left;
+        text-align: center;
     }
-}
 
-#gallery {
-    grid-template-columns: 1fr 1fr 1fr;
-}
+    #gallery {
+        grid-template-columns: 1fr 1fr;
+    }
 
-/* Temperature Data age */
-#tempGrid {
-    grid-template-columns: 1fr 1fr 1fr;
+    /* Temperature Data age */
 
-}
+    #tempGrid {
+        grid-template-columns: 1fr 1fr;
+    }
