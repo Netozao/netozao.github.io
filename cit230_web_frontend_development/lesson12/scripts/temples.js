@@ -1,0 +1,3 @@
+fetch('json/temples.json') {
+
+}
