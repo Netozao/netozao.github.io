@@ -288,3 +288,7 @@ form div {
 #rating {
     margin-left: 60px;
 }
+
+.google-iframe {
+    display: none;
+}

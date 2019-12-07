@@ -342,3 +342,7 @@ section article div h4 {
 #mainArticle3 {
     background-color: rgb(41, 155, 255, 0.7)
 }
+
+.google-iframe {
+    display: none;
+}

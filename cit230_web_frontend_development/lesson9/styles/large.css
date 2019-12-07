@@ -72,3 +72,8 @@
         grid-template-columns: 1fr 1fr 1fr;
 
     }
+
+    .google-iframe {
+        display: block;
+    }
+}

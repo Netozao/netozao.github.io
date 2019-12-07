@@ -140,6 +140,10 @@ section {
     padding-bottom: 20px;
 }
 
+.google-iframe {
+    display: none;
+}
+
 section table,
 tr,
 th,

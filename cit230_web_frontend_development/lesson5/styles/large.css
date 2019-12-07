@@ -40,6 +40,10 @@
         display: block;
     }
 
+    .google-iframe {
+        display: block;
+    }
+
     #article-image {
         display: block;
         width: 208px;

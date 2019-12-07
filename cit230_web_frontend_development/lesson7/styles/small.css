@@ -241,3 +241,7 @@ section figure img:hover {
 section figure img[data-src] {
     filter: blur(0.2em);
 }
+
+.google-iframe {
+    display: none;
+}

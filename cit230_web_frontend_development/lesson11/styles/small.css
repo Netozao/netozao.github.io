@@ -356,3 +356,7 @@ section article div h4 {
 #eventsSodaSprings {
     text-align: center;
 }
+
+.google-iframe {
+    display: none;
+}
