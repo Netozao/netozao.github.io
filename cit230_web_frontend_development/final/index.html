@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Temple Inn & Suites</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link
+        href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,700 |Playfair+Display:400,700|Roboto:400,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+    <header>
+        <div id="banner">
+            <img id="banner-img" src="images/banner.png" alt="Temple Inn & Suite logo and banner">
+        </div>
+        <nav>
+            <ul class="navigation">
+                <li><a href="#" onclick="toggleMenu()">☰ MENU</a></li>
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="temples.html">Temples</a></li>
+                <li><a href="reservation.html">Reservation</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="homeSection">
+            <h1>The best suites close to all temples in Idaho!</h1>
+            <p>We are proud to offer you specialized
+                services and accommodations that meet the needs of temple workers, patrons, and their families who come
+                to serve in the temple or who
+                participate in events such as sealings, weddings, receptions, and youth trips.</p>
+            <p>We have the best suites over all 5 Idaho Temples.</p>
+            <a href="reservation.html" class="catchUp">Book now!</a>
+        </section>
+
+        <br>
+        <br>
+        <section class="homeSection">
+            <h1>Temple of Rexburg</h1>
+            <figure>
+                <img src="images/placeholder640x400.png" data-src="images/rexburg640x400.jpg"
+                    alt="Picture of the Rexburg Temple" class="homeImg">
+            </figure>
+            <h2>Temple Summary:</h2>
+            <p> Annouced: 12 December 2003</p>
+            <p> Groundbreaking: 30 July 2005</p>
+            <p> Dedicated: 10 February 2008</p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p> &copy; <span id="currentYear"></span> | <span>Temple Inn & Suites</span> | Andre Neto
+        </p>
+    </footer>
+    <script src="scripts/toggleMenu.js"></script>
+    <script src="scripts/lazyload.js"></script>
+    <script src="scripts/weather.js"></script>
+</body>
+
+</html>
