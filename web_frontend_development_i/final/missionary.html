@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Temple Inn & Suites</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link
+        href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,700 |Playfair+Display:400,700|Roboto:400,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+    <header>
+        <div id="banner">
+            <img id="banner-img" src="images/banner.png" alt="Temple Inn & Suite logo and banner">
+        </div>
+        <nav>
+            <ul class="navigation">
+                <li><a href="#" onclick="toggleMenu()">☰ MENU</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="temples.html">Temples</a></li>
+                <li><a href="reservation.html">Reservation</a></li>
+                <li class="active"><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Suites especially for Senior Missionaries</h1>
+        <section class="basic">
+            <h2>Keep it simple! Economic suites available:</h2>
+            <img src="images/basicroom650x433.jpg" alt="Picture of an economic suite">
+
+        </section>
+        <section class="deluxe">
+            <h2>Or go the fancy way... We got you covered!</h2>
+            <img src="images/deluxeroom650x433.jpg" alt="Picture of a fancy luxury apartment suite">
+        </section>
+
+        <h2>Have questions? Contact us at any time.</h2>
+        <!-- The method only is GET because github will not accept POST -->
+        <form action="thanks2.html" method="GET">
+            <fieldset class="fieldsetLabel">
+                <legend class="mailingAddress">CONTACT US!</legend>
+                <div class="formFlex">
+                    <label for="fullName">Full Name:</label>
+                    <input type="text" id="fullName" name="fullName" pattern="[A-Za-z ,.'-]{5,}" title="Enter your name"
+                        required>
+                </div>
+                <div class="formFlex">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="user@email.com">
+                </div>
+                <div class="formFlex">
+                    <label for="comments" id="align-top">Comments:</label>
+                    <textarea name="textarea" id="textarea" cols="21" rows="12"></textarea>
+                </div>
+            </fieldset>
+
+            <br>
+            <input class="formBot" type="submit" name="submit" value="SUBMIT">
+            <br>
+        </form>
+        <br>
+    </main>
+
+    <footer>
+        <p> &copy; <span id="currentYear"></span> | <span>Temple Inn & Suites</span> | Andre Neto
+        </p>
+    </footer>
+    <script src="scripts/toggleMenu.js"></script>
+    <script src="scripts/weather.js"></script>
+
+</body>
+
+</html>

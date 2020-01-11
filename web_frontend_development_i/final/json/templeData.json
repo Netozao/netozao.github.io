@@ -1,0 +1,326 @@
+{
+    "temples": [{
+            "templeID": 5596475,
+            "NameOfTemple": "Idaho Falls Idaho Temple",
+            "Location": "Idaho Falls, ID",
+            "YearBuilt": 1945,
+            "Images": "images/idahofalls640x400.jpg",
+            "Address": {
+                "Street": "1000 Memorial Dr",
+                "city": "Idaho Falls",
+                "state": "ID",
+                "county": "Unites States",
+                "zipcode": "83402-3410"
+            },
+            "telephone": {
+                "phone": "208-522-7669"
+            },
+            "services": [
+                "Clothing rental available",
+                "Cafeteria available",
+                "No patron housing available",
+                "Distribution center nearby"
+            ],
+            "email": "us.idahofalls@fakemail.org",
+            "history": [
+                "Announced: 3 March 1937",
+                "Groundbreaking: 19 December 1939",
+                "Dedicated: 23 September 1945",
+                "Rededicated: 4 June 2017"
+            ],
+            "session": [
+                "6:00 AM",
+                "7:00 AM",
+                "8:00 AM",
+                "9:00 AM",
+                "10:00 AM",
+                "11:00 AM",
+                "12:00 PM",
+                "1:00 PM",
+                "2:00 PM",
+                "3:00 PM",
+                "4:00 PM",
+                "5:00 PM",
+                "6:00 PM",
+                "7:00 PM",
+                "8:00 PM"
+            ],
+            "closure": [
+                "Tuesday, 24 December 2019 - Wednesday, 25 December 2019",
+                "Tuesday, 31 December 2019",
+                "Wednesday, 1 January 2020",
+                "Wednesday, 1 January 2020",
+                "Tuesday, 21 January 2020 - Monday, 3 February 2020",
+                "Saturday, 4 April 2020",
+                "Tuesday, 23 June 2020 - Monday, 6 July 2020",
+                "Saturday, 3 October 2020",
+                "Wednesday, 25 November 2020 (Limited Hours)",
+                "Thursday, 26 November 2020",
+                "Thursday, 24 December 2020 - Friday, 25 December 2020",
+                "Thursday, 31 December 2020",
+                "Friday, 1 January 2021"
+            ]
+        },
+        {
+            "templeID": 5586437,
+            "NameOfTemple": "Boise Idaho Temple",
+            "Location": "Boice, ID",
+            "YearBuilt": 1984,
+            "Images": "images/boise640x400.jpg",
+            "Address": {
+                "Street": "1211 S Cole Rd",
+                "city": "Boise",
+                "state": "ID",
+                "county": "Unites States",
+                "zipcode": "83709-1871"
+            },
+            "telephone": {
+                "phone": "208-322-4422"
+            },
+            "services": [
+                "No clothing rental available",
+                "No cafeteria available",
+                "No patron housing available",
+                "Distribution center nearby"
+            ],
+            "email": "us.boice@fakemail.org",
+            "history": [
+                "Announced: 31 March 1982",
+                "Groundbreaking: 18 December 1982",
+                "Dedicated: 25 May 1984",
+                "Rededicated: 29 May 1987",
+                "Rededicated: 18 November 2012"
+            ],
+            "session": [
+                "6:00 AM",
+                "6:30 AM",
+                "7:00 AM",
+                "7:30 AM",
+                "8:00 AM",
+                "8:30 AM",
+                "9:00 AM",
+                "9:30 AM",
+                "10:00 AM",
+                "10:30 AM",
+                "11:00 AM",
+                "11:30 AM",
+                "12:00 PM",
+                "12:30 PM",
+                "1:00 PM",
+                "1:30 PM",
+                "2:00 PM",
+                "2:30 PM",
+                "3:00 PM",
+                "3:30 PM",
+                "4:00 PM",
+                "4:30 PM",
+                "5:00 PM",
+                "5:30 PM",
+                "6:00 PM",
+                "6:30 PM",
+                "7:00 PM",
+                "7:30 PM",
+                "8:00 PM"
+            ],
+            "closure": [
+                "Tuesday, 24 December 2019 - Wednesday, 25 December 2019",
+                "Tuesday, 31 December 2019 (Limited Hours)",
+                "Wednesday, 1 January 2020",
+                "Saturday, 4 April 2020",
+                "Monday, 20 April 2020 - Monday, 4 May 2020",
+                "Saturday, 4 July 2020",
+                "Saturday, 3 October 2020",
+                "Monday, 12 October 2020 - Monday, 26 October 2020",
+                "Wednesday, 25 November 2020 (Limited Hours)",
+                "Thursday, 26 November 2020",
+                "Thursday, 24 December 2020 - Friday, 25 December 2020",
+                "Thursday, 31 December 2020 (Limited Hours)",
+                "Friday, 1 January 2021"
+            ]
+        },
+        {
+            "templeID": 5605242,
+            "NameOfTemple": "Rexburg Idaho Temple",
+            "Location": "Rexburg, ID",
+            "YearBuilt": 2008,
+            "Images": "images/rexburg640x400.jpg",
+            "Address": {
+                "Street": "750 S 2nd E",
+                "city": "Rexburg",
+                "state": "ID",
+                "county": "Unites States",
+                "zipcode": "83440-5404"
+            },
+            "telephone": {
+                "phone": "208-656-0880"
+            },
+            "services": [
+                "Clothing rental available",
+                "No cafeteria available",
+                "No patron housing available",
+                "Distribution center nearby"
+            ],
+            "email": "us.rexburg@fakemail.org",
+            "history": [
+                "Announced: 12 December 2003",
+                "Groundbreaking: 30 July 2005",
+                "Dedicated: 10 February 2008"
+            ],
+            "session": [
+                "6:00 AM",
+                "6:45 AM",
+                "7:30 AM",
+                "8:15 AM",
+                "9:00 AM",
+                "9:45 AM",
+                "10:30 AM",
+                "11:15 AM",
+                "12:00 PM",
+                "12:45 PM",
+                "1:30 PM",
+                "2:15 PM",
+                "3:00 PM",
+                "3:45 PM",
+                "4:30 PM",
+                "5:15 PM",
+                "6:00 PM",
+                "6:45 PM",
+                "7:30 PM"
+
+            ],
+            "closure": [
+                "Tuesday, 24 December 2019 - Wednesday, 25 December 2019",
+                "Tuesday, 31 December 2019",
+                "Saturday, 4 April 2020",
+                "Monday, 13 April 2020 - Monday, 27 April 2020",
+                "Saturday, 4 July 2020",
+                "Saturday, 25 July 2020",
+                "Monday, 24 August 2020 - Monday, 14 September 2020",
+                "Saturday, 3 October 2020",
+                "Wednesday, 25 November 2020 - Thursday, 26 November 2020",
+                "Thursday, 24 December 2020 - Friday, 25 December 2020",
+                "Thursday, 31 December 2020 - Friday, 1 January 2021",
+                "Friday, 1 January 2021"
+            ]
+        },
+        {
+            "templeID": 5610810,
+            "NameOfTemple": "Twin Falls Idaho Temple",
+            "Location": "Twin Falls, ID",
+            "YearBuilt": 2008,
+            "Images": "images/twinfalls640x400.jpg",
+            "Address": {
+                "Street": "1405 Eastland Dr N",
+                "city": "Twin Falls",
+                "state": "ID",
+                "county": "Unites States",
+                "zipcode": "83301-0000"
+            },
+            "telephone": {
+                "phone": "208-736-7070"
+            },
+            "services": [
+                "No clothing rental available",
+                "No cafeteria available",
+                "No patron housing available",
+                "Distribution center nearby"
+            ],
+            "email": "us.twinfalls@fakemail.org",
+            "history": [
+                "Announced: 2 October 2004",
+                "Groundbreaking: 15 April 2006",
+                "Dedicated: 24 August 2008"
+            ],
+            "session": [
+                "5:30 AM",
+                "7:00 AM",
+                "9:00 AM",
+                "11:00 AM",
+                "1:00 PM",
+                "3:00 PM",
+                "5:00 PM",
+                "7:00 PM"
+            ],
+            "closure": [
+                "Tuesday, 24 December 2019 - Wednesday, 25 December 2019",
+                "Tuesday, 31 December 2019",
+                "Wednesday, 1 January 2020",
+                "Monday, 13 January 2020 - Monday, 27 January 2020",
+                "Saturday, 4 April 2020",
+                "Monday, 8 June 2020 - Monday, 22 June 2020",
+                "Saturday, 4 July 2020",
+                "Saturday, 3 October 2020",
+                "Wednesday, 25 November 2020 (Limited Hours)",
+                "Thursday, 26 November 2020",
+                "Thursday, 24 December 2020",
+                "Friday, 25 December 2020",
+                "Thursday, 31 December 2020",
+                "Friday, 1 January 2021"
+            ]
+        },
+        {
+            "templeID": 5600685,
+            "NameOfTemple": "Meridian Idaho Temple",
+            "Location": "Meridian, ID",
+            "YearBuilt": 2017,
+            "Images": "images/meridian640x400.jpg",
+            "Address": {
+                "Street": "7355 N Linder Rd",
+                "city": "Meridian",
+                "state": "ID",
+                "county": "Unites States",
+                "zipcode": "83646-0000"
+            },
+            "telephone": {
+                "phone": "208-957-7300"
+            },
+            "services": [
+                "No clothing rental available",
+                "No cafeteria available",
+                "No patron housing available",
+                "No distribution center nearby"
+            ],
+            "email": "us.meridian@fakemail.org",
+            "history": [
+                "Announced: 2 April 2011",
+                "Groundbreaking: 23 August 2014",
+                "Dedicated: 19 November 2017"
+            ],
+            "session": [
+                "5:15 AM",
+                "6:00 AM",
+                "6:45 AM",
+                "7:30 AM",
+                "8:15 AM",
+                "9:00 AM",
+                "9:45 AM",
+                "10:30 AM",
+                "11:15 AM",
+                "12:00 PM",
+                "12:45 PM",
+                "1:30 PM",
+                "2:15 PM",
+                "3:00 PM",
+                "3:45 PM",
+                "4:30 PM",
+                "5:15 PM",
+                "6:00 PM",
+                "6:45 PM",
+                "7:30 PM"
+            ],
+            "closure": [
+                "Tuesday, 24 December 2019 - Wednesday, 25 December 2019",
+                "Tuesday, 31 December 2019",
+                "Saturday, 4 April 2020",
+                "Monday, 4 May 2020 - Monday, 15 June 2020",
+                "Saturday, 4 July 2020",
+                "Saturday, 3 October 2020",
+                "Monday, 2 November 2020 - Monday, 16 November 2020",
+                "Wednesday, 25 November 2020 - Thursday, 26 November 2020",
+                "Thursday, 24 December 2020 - Friday, 25 December 2020",
+                "Thursday, 31 December 2020 - Friday, 1 January 2021",
+                "Friday, 1 January 2021"
+            ]
+        }
+    ]
+}
