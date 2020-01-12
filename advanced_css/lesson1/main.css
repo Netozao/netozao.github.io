@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css?family=Lora&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Header CSS */
+h1,
+h2 {
+    font-family: 'Lora';
+}
+
+p {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+header {
+    background-color: #6495ED;
+    padding: 3em 2em;
+    text-align: right;
+}
+
+header h1 {
+    padding-bottom: .5em;
+}
+
+header li {
+    padding-top: 1em;
+}
+
+header nav a:hover {
+    color: white;
+}
+
+header nav a:active {
+    color: #DEB887;
+}
+
+
+header a,
+header nav a:visited {
+    color: #FAEBD7;
+}
+
+header hr {
+    border: .5px solid #FAEBD7;
+}
+
+header a,
+header u {
+    text-decoration: none;
+}
+
+header nav a {
+    font-size: larger;
+}
+
+li {
+    list-style-type: none;
+}
+
+/* Main CSS */
+main {
+    background-color: #FAEBD7;
+    padding-top: 2.5em;
+    padding-bottom: 3em;
+}
+
+img {
+    width: 55%;
+    margin-top: 3.4em;
+}
+
+figure {
+    text-align: center;
+}
+
+article {
+    -webkit-box-shadow: 3px 3px 2px 0px rgba(195, 195, 195, 0.98);
+    box-shadow: 3px 3px 2px 0px rgba(195, 195, 195, 0.98);
+    background-color: white;
+    max-width: 75%;
+    margin: 0 auto;
+    padding: 2em;
+    padding-bottom: 3em;
+    margin-bottom: 2em;
+}
+
+.post-date {
+    font-size: 15px;
+    font-weight: bolder;
+    color: #6F7F68;
+    margin-bottom: .5em;
+    ;
+}
+
+article>section>h2>a {
+    padding-right: 1em;
+    font-size: 28px;
+    color: black;
+}
+
+article>section>p {
+    font-size: 17px;
+    margin-top: 15px;
+}
+
+article a {
+    text-decoration: none;
+}
+
+article>a:visited {
+    color: black;
+}
+
+article>a:active {
+    color: #DEB887;
+}
+
+article>a:hover {
+    color: #6495ED;
+    text-decoration: underline;
+}
+
+@media only screen and (min-width: 60em) {
+    html {
+        background-color: black;
+    }
+
+    body {
+        max-width: 750px;
+        margin: 0 auto;
+    }
+
+    body div {
+        display: grid;
+        grid-template-columns: 20% 80%;
+        grid-gap: 0px;
+        ;
+    }
+
+    header {
+        max-width: 150px;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        position: fixed;
+        height: 100%;
+    }
+
+    main {
+        max-width: 600px;
+        grid-column: 2;
+    }
+
+    img {
+        width: 52%;
+    }
+
+    .post-date {
+        font-size: 11px;
+        font-weight: bolder;
+        color: #6F7F68;
+        margin-bottom: .5em;
+        ;
+    }
+
+    article>section>h2>a {
+        padding-right: 1em;
+        font-size: 20px;
+        color: black;
+    }
+
+    article>section>p {
+        font-size: 13px;
+        margin-top: 15px;
+    }
+
+    main {
+
+        padding-right: 3em;
+        padding-left: 6em;
+    }
+}
