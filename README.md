@@ -1,1 +1,1 @@
-# This repository is related to my Portfolio, that includes information and content of some classes I took at both LDSBC and BYUI.
+# This repository is related to my Portfolio (netozao.github.io), where you will find apps and websites I built, as well some tutorials. Welcome!
