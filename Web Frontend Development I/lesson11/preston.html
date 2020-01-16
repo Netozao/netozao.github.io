@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Preston, Idaho</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/large.css">
+</head>
+
+<body>
+    <header>
+        <div><img class="header-img" src="images/header.png" alt="Website logo - colored umbrella"></div>
+        <nav>
+            <ul class="navigation">
+                <li><a href="#" class="green" onclick="toggleMenu()">☰ MENU</a></li>
+                <li><a href="index.html" class="yellow">Home</a></li>
+                <li class="active"><a href="preston.html">Preston</a></li>
+                <li><a href="sodaSprings.html" class="red">Soda Springs</a></li>
+                <li><a href="fishHaven.html" class="green">Fish Haven</a></li>
+                <li><a href="stormcenter.html" class="yellow">Storm Center</a></li>
+                <li><a href="gallery.html" class="blue">Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <input type="hidden" id="cityID" value="5604473">
+        <h1>Preston, Idaho</h1>
+        <div class=sections>
+            <section id="pancake" class="hidden">
+                <p>Saturday = Preston Pancakes in the Park! 9:00 a.m. Saturday at the city park pavilion.</p>
+            </section>
+            <br>
+            <section class="hero">
+                <picture>
+                    <source media="(min-width: 1024px)" class="hero-image" srcset="images/hero-image.jpg">
+                    <source media="(min-width: 520px)" class="hero-image" srcset="images/hero-image.jpg">
+                    <img src="images/hero-image.jpg" class="hero-image"
+                        alt="Small/Medium/Large hero picture - Child playing at Snow">
+                </picture>
+                <!-- <img src="images/hero-image.jpg" class="hero-image" alt="Kid playing at Snow"> -->
+                <div class="hero-text">
+                    <h2>Weather Summary</h2>
+                    <p>Currently: <span id="currentTemp"></span> | <span id="currentDesc"></span></p>
+                    <p>High: <span id="high"></span></p>
+                    <p>Wind Chill: <span id="windChill"></span></p>
+                    <p>Humidity: <span id="humidity"></span></p>
+                    <p>Wind Speed: <span id="windSpeed"></span></p>
+                </div>
+            </section>
+            <br>
+            <section class="forecast">
+                <h2>5-day Forecast</h2>
+                <table>
+                    <tr>
+                        <th>
+                            <p id="day1"></p>
+                        </th>
+                        <th>
+                            <p id="day2"></p>
+                        </th>
+                        <th>
+                            <p id="day3"></p>
+                        </th>
+                        <th>
+                            <p id="day4"></p>
+                        </th>
+                        <th>
+                            <p id="day5"></p>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td> <img id="forecastIcon1">
+                            <p id="temp1"></p>
+                        </td>
+                        <td> <img id="forecastIcon2">
+                            <p id="temp2"></p>
+                        </td>
+                        <td> <img id="forecastIcon3">
+                            <p id="temp3"></p>
+                        </td>
+                        <td> <img id="forecastIcon4">
+                            <p id="temp4"></p>
+                        </td>
+                        <td> <img id="forecastIcon5">
+                            <p id="temp5"></p>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+            <section class="article-box">
+                <h2>Why is the sky blue?</h2>
+                <img src="images/article-image.jpg" id="article-image" alt="kids writing a book">
+
+                <p class="article-text"> Sunlight reaches Earth's atmosphere and is scattered in all directions by all
+                    the gases and particles in the air. Blue light is scattered more than the other colors because it
+                    travels as shorter, smaller waves. This is why we see a blue sky most of the time.</p>
+            </section>
+            <section class="events">
+                <h2>Preston Upcoming Events</h1>
+                    <div id="eventsPreston">
+                    </div>
+            </section>
+            <section class="contact-info">
+                <h2>Contact Information</h2>
+                <div class="contact-large">
+                    <p class="contact-text"><b>Address:</b> 111 West, 7th South, Rexburg, ID<br>
+                        <b>Email:</b> <a href="mailto:netozao@weather4kids.com">netozao@weather4kids.com</a><br>
+                        <b>Phone:</b> <a href="tel:+13852042385">(385)204-2385</a>
+                    </p>
+                    <p class="google-iframe">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2879.2133233280915!2d-111.79089908462805!3d43.809934379116335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53540b1ad780bffd%3A0x38be3029b3df960f!2s111%20W%207th%20S%2C%20Rexburg%2C%20ID%2083440!5e0!3m2!1sen!2sus!4v1571509357294!5m2!1sen!2sus"
+                            frameborder="0" allowfullscreen="">
+                        </iframe>
+                    </p>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer>
+        <p><span class="yellow">&copy; Weather4Kids</span> | <span class="blue"> Andre Neto</span></p>
+        <p><span id="currentDate" class="green"></span> </p>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/windchill.js"></script>
+    <script src="scripts/towndataevents.js"></script>
+    <script src="scripts/five-day-forecast.js"></script>
+</body>
+
+</html>

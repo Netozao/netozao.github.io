@@ -1,0 +1,210 @@
+@import url(https://fonts.googleapis.com/css?family=Lora);
+/* Replace accordingly */
+
+/*
+Relative Lengths:
+em	    Relative to the font-size of the element (2em means 2 times the size of the current font)	
+ex	    Relative to the x-height of the current font (rarely used)	
+ch	    Relative to width of the "0" (zero)	
+rem	    Relative to font-size of the root element	
+vw	    Relative to 1% of the width of the viewport*	
+vh	    Relative to 1% of the height of the viewport*	
+vmin	Relative to 1% of viewport's* smaller dimension	
+vmax	Relative to 1% of viewport's* larger dimension	
+%	    Relative to the parent element
+*/
+
+/* A big thanks to Professor David Thompson who shared his main.css code with me. Even though I got the same results, this is the best way to complete the assignment since it has fewer lines of code. */
+
+/* My defaults in all css files */
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background: #faebd7;
+    /* Replace accordingly */
+    font-family: Helvetica, Arial, sans-serif;
+    /* Replace accordingly */
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/*Global Link styles */
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: Lora, 'Times New Roman', serif;
+}
+
+body {
+    /*    display: flex;*/
+    min-height: 100%;
+    /*    flex-direction: column;*/
+}
+
+/*
+body > div {
+    display: flex;
+    flex: 1 0 auto;
+    align-items: stretch;
+    padding: var(--space);
+}
+*/
+
+header {
+    background-color: #6495ed;
+    text-align: right;
+    color: #faebd7;
+    width: 100%;
+    height: auto;
+    padding: 2em;
+}
+
+header>h1>a:link,
+header>h1>a:visited {
+    color: #faebd7;
+}
+
+header>h1>a:hover {
+    color: white;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav li {
+    margin: 1em 0;
+    /* top-bottom left-right */
+}
+
+/* Navigation link colors */
+
+nav a:link,
+nav a:visited {
+    color: #faebd7;
+}
+
+nav a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+nav a:active {
+    color: #deb887;
+}
+
+main {
+    background: linear-gradient(#faebd7, white);
+    margin-left: 0;
+    height: 100%;
+}
+
+article {
+    background-color: white;
+    width: 90%;
+    margin: 2em auto;
+    /* margin auto only works for block elements. Need to use "text-align: center" for inline elements */
+    padding: 2em;
+    border: 1px solid #f0f0f0;
+    box-shadow: 3px 3px 3px #d0d0d0;
+    /* box-shadow syntax: none|h-offset v-offset blur spread color |inset|initial|inherit; */
+}
+
+/* article link styles */
+
+article a:link,
+article a:visited {
+    color: #6495ed;
+}
+
+article a:hover {
+    text-decoration: underline;
+}
+
+article a:active {
+    color: #deb887;
+}
+
+article h2 a:link,
+article h2 a:visited {
+    color: black;
+}
+
+article h2 a:hover {
+    color: #6495ed;
+    text-decoration: underline;
+}
+
+article h2 a:active {
+    color: #deb887;
+}
+
+article h2 {
+    margin-top: 0.3em;
+    margin-bottom: 2.5em;
+    font-size: 1.8em;
+}
+
+figure {
+    text-align: center;
+    /* margin auto only works for block elements. Need to use "text-align: center" for inline elements */
+}
+
+figure img {
+    width: 100%;
+}
+
+.post-date {
+    color: gray;
+    margin: 0;
+    padding: 0;
+    font-size: 1.2em;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: normal;
+}
+
+@media screen and (min-width: 700px) {
+    header {
+        width: 17em;
+        height: 100vh;
+        padding: 2.5em;
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom: 0;
+    }
+
+    main {
+        margin-left: 17em;
+    }
+
+    article {
+        width: 80%;
+        max-width: 800px;
+        margin: 3em auto;
+        padding: 3em;
+    }
+
+    figure img {
+        width: 60%;
+    }
+}
