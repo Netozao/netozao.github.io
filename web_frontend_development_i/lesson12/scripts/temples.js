@@ -1,3 +1,0 @@
-fetch('json/temples.json') {
-
-}

@@ -1,1 +1,1 @@
-# This repository is related to my Portfolio (netozao.github.io), where you will find apps and websites I built, as well some tutorials. Welcome!
+## This repository is related to my Portfolio (netozao.github.io), where you will find my apps, websites and tutorials. Welcome!
