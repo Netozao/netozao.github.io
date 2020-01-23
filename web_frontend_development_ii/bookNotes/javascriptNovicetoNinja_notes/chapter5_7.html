@@ -10,207 +10,6 @@
 
 <body>
     <main>
-        <h1>Javascript Novice to Ninja (Ch. 3-5)</h1>
-        <h2>Personal Notes</h2>
-        <br>
-        <h3>Chapter 3</h3>
-        <p>Arrays - An array is an ordered list of values</p>
-        <pre>
-            const myArray = [];
-            typeof [] - >> 'object' - built-in object
-            const mixedArray = [ null, 1, [], 'two', true ]; - Mixed types of items inside an array
-            delete avengers[3]; - remove an item from an array
-            Destructuring an array is taking values out of an array and presenting them as individual values.
-                const [x,y] = [1,2]; 
-                [x,y] = [y,x]; - swapping the value of two variables
-            avengers.length; - Find the legnth of an array
-            avengers[avengers.length - 1]; - find the last item in an array
-            avengers.pop(); - To remove the last item from an array
-            avengers.shift(); - To remove the first item in the array
-            avengers.push('Thor'); - appends a new value to the end of the array
-            avengers.unshift('Captain America'); - appends a new item to the beginning of the array
-            avengers.concat(['Hulk','Hawkeye', 'Black Widow']); - merge an array with one or more arrays
-                this does not change the avengers array, it simply creates another array combining the two arrays
-                use assignment to update: avengers = avengers.concat(['Hulk','Hawkeye', 'Black Widow']);
-            avengers = [ ...avengers, ...['Hulk','Hawkeye'] - spread operator that was added to ES6.
-            avengers.join(); - turn the array into a string that comprises all the items in the array
-                avengers.join(' & '); - choose a separator other than a comma
-            avengers.slice(2,4) - creates a subarray;
-                This is a non-destructive operation
-            avengers.splice(3, 1, 'Scarlet Witch'); - remove itemsand insert new items in their place.
-                This is a destructive operation
-                The second number tells us how many items to remove from the array.
-            avengers.splice(4,0,'Quicksilver'); - used to insert values into an array at a specific index without removing any items
-            avengers.splice(2,1); - To remove a value completely (delete operator leaves "undefined")
-            avengers.reverse(); - reverse the order of an array permanently.
-            avengers.sort(); - sort the order of an array (alphabetical order by default)
-                Numbers are sorted by their first digit, rather than numerically
-            avengers.indexOf('Iron Man'); - find the first occurrence of a value in an array
-                ES6 - avengers.includes('Iron Man');
-            const coordinates = [[1,3],[4,2]]; - multidimensional array
-                coordinates[1][0]; // The first value of the second array
-            const flat = [...summer, ...winter]; spread used to flatten multi-dimensional arrays
-            const list = new Set(); ES6 - collection of unique values
-                list.add(2).add(3).add(4); Too add unique values
-            const numbers = new Set([1,2,3]);
-            const letters = new Set('hello'); - unique letters from any string - >> Set { 'h' , 'e' , 'l' , 'o' }
-            const words = new Set().add('the').add('quick').add('fox') - unique words
-            const arrays = new Set().add([1]).add([1]); - arrays and objects are considered unique values
-                >> Set { [ 1 ], [ 1 ] }
-                [1] === [1]; >> false
-            jla.size(); - values in a set can be found using the size() method
-            jla.has('Superman'); - use to check if a value is in a set
-            jla.delete('Superman'); - use to remove a value from a set
-            jla.clear(); - use to remove all values from a set
-            const shoppingArray = [...shoppingSet] - converting set into an array
-                const shoppingArray = Array.from(shoppingSet); - same result using Array.from()
-            const nonDuplicate = [...new Set(repeatedArray)]; - copy of an array without dups
-        </pre>
-        <p>Ternary Operator - ES6</p>
-        <pre>
-            condition ? (//code to run if condition is true) : (//code to run if condition is false);
-            console.log(`n is a ${(n%2 === 0)? 'even' : 'odd'} number`);
-            day${dayOfMonth !== 1 ? 's' : ''}`); - Great "day" vs "days"
-        </pre>
-        <p>Switch</p>
-        <pre>
-            switch (number) {
-            case 4:
-            console.log('You rolled a four');
-            break;
-            case 5:
-            console.log('You rolled a five');
-            break;
-            case 6:
-            console.log('You rolled a six');
-            break;
-            default:
-            console.log('You rolled a number less than four');
-            break;
-        </pre>
-        <p>While Loops</p>
-        <pre>
-            let bottles = 11;
-            while (--bottles){
-            console.log(`There were ${bottles} green bottles, hanging on a wall. 
-            And if one green bottle should accidentally fall, there'd be ${bottles-1} green bottles hanging on the wall`);
-            }
-            (remember that 0 is a falsy value) so the loop will stop.
-        </pre>
-        <p>do ... while Loops</p>
-        <pre>
-            let bottles = 10;
-            do {
-            console.log(`There were ${bottles} green bottles, hanging on a wall. 
-            And if one green bottle should accidentally fall, there'd be ${bottles-1} green bottles hanging on the wall`);
-            bottles--;
-            } while (bottles > 0)
-        </pre>
-
-        <p>For Loops</p>
-        <pre>
-            for (let bottles = 10 ; bottles > 0 ; bottles--) {
-            console.log(`There were ${bottles} green bottles, hanging on a wall.
-            And if one green bottle should accidentally fall, there'd be ${bottles-1} green bottles hanging on the wall`);
-            }
-        </pre>
-
-        <p>Nested Loops</p>
-        <pre>
-            Here’s an example that produces a multiplication table up to 12 x 12:
-            <!--    
-                for(let i=1 ; i<13 ; i++){
-                for(let j=1 ; j<13 ; j++){ 
-                console.log(`${j} multiplied by ${i} is ${i*j}`); }
-            } -->
-        </pre>
-
-        <p>Looping over arrays:</p>
-        <pre>
-            ES6 introduced an improved iterator function for arrays called a for-of loop that uses a slightly different syntax:
-            for(const value of avengers){
-            console.log(value);
-            }
-        </pre>
-
-
-
-        <h3>Chapter 4</h3>
-        <p>Function literal</p>
-        <pre>
-            function hello(){
-            console.log('Hello World!');
-            }
-        </pre>
-
-        <p>Function Expressions</p>
-        <pre>
-            const goodbye = function(){
-            console.log('Goodbye World!');
-            }; // anonymous function
-            
-            const goodbye = function bye(){
-            console.log('Goodbye World!');
-            };
-        </pre>
-
-        <p>Parameters and Arguments</p>
-        <pre>
-            Parameters and arguments are terms that are often used interchangeably to represent values provided for the function as an input.
-            There is a subtle difference though: any parameters a function needs are set when the function is defined.
-            When a function is invoked, it is provided with arguments.
-        </pre>
-
-        <p>Improved Mean Function using to accept any number of arguments - ES6</p>
-        <pre>
-            function mean(...values) {
-            let total = 0;
-            for(const value of values) {
-            total += value;
-            }
-            return total/values.length;
-            }
-        </pre>
-
-        <p>Default Parameters - if no arguments are provided</p>
-        <pre>
-            function hello(name='World') {
-            console.log(`Hello ${name}!);
-            }
-
-            Prior to ES6: name = name || "World";
-        </pre>
-
-        <p>Arrow Functions - The parameters come before the arrow and the main body of the function comes after.</p>
-        <pre>
-            const hello = () => alert('Hello World!');
-        </pre>
-
-        <p>Callback - A function that is passed as an argument to another function.</p>
-        <pre>
-            [1,3,12,5,23,18,7].sort(numerically);
-
-            function numerically(a,b){
-            return a-b;
-            }
-        </pre>
-
-        <p>Array Iterators</p>
-        <pre>
-            const colors = ['Red', 'Green', 'Blue'];
-
-            colors.forEach( (color,index) =>
-            console.log(`Color at position ${index} is ${color}`) );
-        </pre>
-
-        <p>Filter()</p>
-        <pre>
-            const numbers = [ 2, 7, 6, 5, 11, 23, 12 ]
-            numbers.filter(x => x%2 === 0 ); // this returns true if the number is even
-            << [ 2, 6, 12 ]
-        </pre>
-
-
         <h3>Chapter 5</h3>
         <p>An object literal is an object that is created directly in the language by wrapping all its properties and
             methods in curly braces {}.</p>
@@ -337,52 +136,227 @@
                 $ marks the position immediately after the last character in the string
         </pre>
 
-        <p>Quiz Project</p>
+        <h3>Chapter 6</h3>
+        <p>Getting An Element By Its ID</p>
         <pre>
-            // Set the questions
-            const quiz = [
-                ["What is Superman's real name?", "Clark Kent"],
-                ["What is Wonderwoman's real name?", "Dianna Prince"],
-                ["What is Batman's real name?", "Bruce Wayne"]
-            ];
+            const h1 = document.getElementById('title');
+            If no element exists with the ID provided, null is returned.
+        </pre>
 
-            function start(quiz) {
-                // initialize score
-                let score = 0;
+        <p>Get Elements By Their Tag Name</p>
+        <pre>
+            const listItems = document.getElementsByTagName('li');
+            As this is a node list, we can use the index notation to find each individual paragraph in the list:
+                listItems[0];
+            If there are no elements in the document with the given tag name, an empty node list is returned.
+        </pre>
+        <p>Get Elements By Their Class Name</p>
+        <pre>
+            const heroes = document.getElementsByClassName('hero');
+            heroes.length;
+        </pre>
+        <p>Query Selectors</p>
+        <pre>
+            The document.querySelector() method allows you to use CSS notation to find the first element in the document
+            The document.querySelectorAll() method also uses CSS notation but returns a node list of all the elements
+            If no elements match, it will return an empty node list.
+            document.querySelector('#bats');
+                <!-- <li class="vigilante hero" id="bats">Batman</li> -->
+            document.querySelectorAll('.hero');
+                <!-- NodeList [<li class="hero">, <li id="bats">, -->
+                <!-- <li class="hero">] -->
+            const wonderWoman = document.querySelector('li:last-child');
+        </pre>
+        <p>Setting An Element’s Attributes</p>
+        <pre>
+            The setAttribute can change the value of an element’s attributes. 
+            It takes two arguments: the attribute that you wish to change, and the new value of that attribute.
+            wonderWoman.setAttribute('class', 'villain');
+        </pre>
+        <p>Creating An Element</p>
+        <pre>
+            The document object has a createElement() method that takes a tag name as a parameter and returns that element.
+            const flash = document.createElement('li');
+        </pre>
+        <p>Creating a Text Node</p>
+        <pre>
+            A text node can be created using the document.createTextNode() method.
+            const flashText = document.createTextNode('Flash');
+        </pre>
+        <p>Appending Nodes</p>
+        <pre>
+            Every node object has an appendChild() method that will add another node (given as an argument) as a child node.
+            flash.appendChild(flashText);
+        </pre>
+        <p>A Function To Create Elements</p>
+        <pre>
+            function createElement (tag,text) {
+                const el = document.createElement(tag);
+                el.textContent = text;
+                return el
+            }
+        
+        const aquaman = createElement('li','Aquaman');
 
-                // main game loop
-                for (const [question, answer] of quiz) {
-                    const response = ask(question);
-                    check(response, answer);
-                }
-                // end of main game loop
+        The insertBefore() method will place a new element before another element in the markup.
+            heroes.insertBefore(aquaman,wonderWoman);
 
-                gameOver();
+        The appendChild() and insertBefore() methods can be used to move markup that already exists in the DOM as well.
+        An element can be removed from a page using the removeChild() method.
+            heroes.removeChild(aquaman);
+        
+        The replaceChild() method can be used to replace one node with another.
+            const h1 = document.getElementById('title');
+            const oldText = h1.firstChild;
+            const newText = document.createTextNode('Justice League of America');
+            h1.replaceChild(newText,oldText);
 
-                // function declarations
-                function ask(question) {
-                    return prompt(question);
-                }
+        The innerHTML element property returns all the child elements of an element as a string of HTML.
+            heroes.innerHTML
 
-                function check(response, answer) {
-                    // check if answer is correct
-                    if (response === answer) {
-                        alert('Correct!');
-                        // increase score by 1
-                        score++;
-                    } else {
-                        alert(`Wrong! The correct answer was ${answer}`);
-                    }
-                }
+        There is a function called getComputedStyle() that will retrieve all the style information of an element
+            getComputedStyle(superman);
+            
+        used to access elements on a page:
+            document.getElementById()
+            document.getElementsByClassName()
+            document.getElementsByTagNames()
+            document.querySelector()
 
-                function gameOver() {
-                    // At the end of the game, report the player's score
-                    alert(`Game Over, you scored ${score} point${score !== 1 ? 's' : ''}`);
-                }
+        used to navigate around the DOM tree
+            parentNode()
+            previousSibling()
+            nextSibling()
+            childNodes()
+            children()
+
+        An element’s attributes can be accessed using:
+            getAttribute()
+            setAttribute()
+        create dynamic markup on the fly:
+            createElement()
+            createTextNode()
+
+        Markup can be added to the page using the appendChild() and insertBefore() methods.
+
+        Elements can be replaced using the replaceChild() method, and removed using the removeChild() method.
+
+        The innerHTML property can be used to insert raw HTML directly into the DOM.
+
+        The CSS properties of an element can be changed by accessing the style property.
+    </pre>
+
+        <h3>Chapter 7</h3>
+        <p>Event Listeners</p>
+        <pre>
+            -document.body.addEventListener("click", doSomething);
+        </pre>
+
+        <p>Inline Event Handlers</p>
+        <pre>
+            -onclick="console.log('You Clicked Me!')">Click Me
+        </pre>
+        <p>Using Event Listeners</p>
+        <pre>
+            -document.body.addEventListener('click',doSomething);
+            addEventListener('click', () => alert('You Clicked!'));
+
+            Alternatively, a named function could be declared and then referenced in the event listener:
+
+            function doSomething() {
+                alert('You Clicked!');  
+            }
+            addEventListener('click',doSomething);
+        </pre>
+
+        <p>The Event Object</p>
+        <pre>
+            function doSomething(event){
+                console.log(event.type);
             }
 
-            start(quiz);
+            function doSomething(event){
+                console.log(event.target);
+            }
+
+            full list on the Events page of the Mozilla Developer Network:
+                https://developer.mozilla.org/en-US/docs/Web/Events
         </pre>
+
+        <p>Mouse events</p>
+        <pre>
+            const clickParagraph = document.getElementById('click');
+            clickParagraph.addEventListener('click',() => console.log('click') );
+            clickParagraph.addEventListener('mousedown',() => console.log('down') );
+            clickParagraph.addEventListener('mouseup',() => console.log('up') );
+
+            const dblclickParagraph = document.getElementById('dblclick');
+            dblclickParagraph.addEventListener('dblclick', highlight);
+            function highlight(event){
+                event.target.classList.toggle('highlight');
+            }
+
+            const mouseParagraph = document.getElementById('mouse');
+            mouseParagraph.addEventListener('mouseover', highlight);
+            mouseParagraph.addEventListener('mouseout', highlight);
+
+            mouseParagraph.addEventListener('mousemove', () => console.log('You Moved!') );
+        </pre>
+
+        <p>Keyboard Events</p>
+        <pre>
+            The keydown event occurs when a key is pressed and will continue to occurif the key is held down.
+            The keypress event occurs after a keydown event but before a keyup event.
+            The keyup event occurs when a key is released.
+
+            addEventListener('keydown',highlight);
+            addEventListener('keyup', (event) => console.log(`You stopped pressing the key on ${new Date}`));
+            addEventListener('keypress', (event) => console.log(`You pressed the ${event.key} character`));
+        </pre>
+
+        <p>Modifier Keys</p>
+        <pre>
+            addEventListener('keydown', (event) => {
+                if (event.key === 'c' && event.ctrlKey) {
+                    console.log('Action canceled!');
+                }
+            });
+
+            addEventListener('click', (event) => {
+                if (event.shiftKey) {
+                    console.log('A Shifty Click!');
+                }
+            });
+        </pre>
+
+        <p>Touch Events</p>
+        <pre>
+            addEventListener('touchend', () => console.log('Touch stopped');
+            The touchmove event occurs after a user has touched the screen then moves around without leaving.
+            The touchenter event occurs when a user has already started touching the surface, but then passes over the element to which the event listener is attached.
+            The touchleave event occurs when the user is still touching the surface, but leaves the element to which the event listener is attached.
+            The touchcancel event occurs when a touch event is interrupted, such as a user’s finger moving outside the document window, or too many fingers being used at once.
+        </pre>
+
+        <p>Removing Event Listeners</p>
+        <pre>
+            const onceParagraph = document.getElementById('once');
+            onceParagraph.addEventListener('click', remove);
+            function remove(event) {
+                console.log('Enjoy this while it lasts!');
+                onceParagraph.style.backgroundColor = 'pink';
+                onceParagraph.removeEventListener('click',remove);
+            }
+        </pre>
+        <p>Stopping Default Behavior</p>
+        <pre>
+            const brokenLink = document.getElementById('broken');
+            brokenLink.addEventListener('click',(event) => {
+                event.preventDefault();
+                console.log('Broken Link!');
+            });
+        </pre>
+
     </main>
 </body>
 
