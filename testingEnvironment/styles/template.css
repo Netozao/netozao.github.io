@@ -1,8 +1,13 @@
-@import url(https://fonts.googleapis.com/css?family=Lora);
-/* Replace accordingly */
+/* 
+MY DEFAULTS IN CSS FILES:
+* {box-sizing: border-box;}
+img {max-width: 100%;}
+html {height: 100%;}
+body {background: -----------; font-family: ----------; font-size: 100%; margin: 0; padding: 0; height: 100%;}
+a {text-decoration: none;}
+h1, h2, h3, h4, h5, h6 {font-family: -------------;}
 
-/*
-Relative Lengths:
+RELATIVE LENGTHS:
 em	    Relative to the font-size of the element (2em means 2 times the size of the current font)	
 ex	    Relative to the x-height of the current font (rarely used)	
 ch	    Relative to width of the "0" (zero)	
@@ -13,27 +18,47 @@ vmin	Relative to 1% of viewport's* smaller dimension
 vmax	Relative to 1% of viewport's* larger dimension	
 %	    Relative to the parent element
 */
+@import url(https://fonts.googleapis.com/css?family=Lora);
+/* Global styles */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
 
-/* My defaults in all css files */
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 img {
-    max-width: 100%;
+  max-width: 100%;
 }
 
 html {
-    height: 100%;
+  height: 100%;
 }
 
 body {
-    background: #faebd7;
-    /* Replace accordingly */
-    font-family: Helvetica, Arial, sans-serif;
-    /* Replace accordingly */
-    font-size: 100%;
-    margin: 0;
-    padding: 0;
-    height: 100%;
+  background: #faebd7;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  min-height: 100%;
 }
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Lora, "Times New Roman", serif;
+}
+
+/*# sourceMappingURL=template.css.map */

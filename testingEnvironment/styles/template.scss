@@ -1,0 +1,130 @@
+/* 
+MY DEFAULTS IN CSS FILES:
+* {box-sizing: border-box;}
+img {max-width: 100%;}
+html {height: 100%;}
+body {background: -----------; font-family: ----------; font-size: 100%; margin: 0; padding: 0; height: 100%;}
+a {text-decoration: none;}
+h1, h2, h3, h4, h5, h6 {font-family: -------------;}
+
+RELATIVE LENGTHS:
+em	    Relative to the font-size of the element (2em means 2 times the size of the current font)	
+ex	    Relative to the x-height of the current font (rarely used)	
+ch	    Relative to width of the "0" (zero)	
+rem	    Relative to font-size of the root element	
+vw	    Relative to 1% of the width of the viewport*	
+vh	    Relative to 1% of the height of the viewport*	
+vmin	Relative to 1% of viewport's* smaller dimension	
+vmax	Relative to 1% of viewport's* larger dimension	
+%	    Relative to the parent element
+*/
+@import url(https://fonts.googleapis.com/css?family=Lora);
+
+// Variable assignment
+//set breakpoint sizes
+$break-small: 20em;
+$break-medium: 31em;
+$break-large: 60em;
+
+//colors
+$body-background: #faebd7;
+$header-background-color: #6495ed;
+$header-links-color: #faebd7;
+$header-links-hover: white;
+$nav-a-color: #faebd7;
+$nav-a-hover: white;
+$nav-a-active: #deb887;
+$main-background: linear-gradient(#faebd7, white);
+$article-background-color: white;
+$article-border: 1px solid #f0f0f0;
+$article-box-shadow: 3px 3px 3px #d0d0d0;
+$article-links-color: #6495ed;
+$article-links-active: #deb887;
+$article-headings-links: black;
+$article-headings-hover: #6495ed;
+$article-headings-active: #deb887;
+$class-color: gray;
+
+//fonts
+$font-family-body: Helvetica,
+Arial,
+sans-serif;
+$font-family-headings: Lora,
+'Times New Roman',
+serif;
+
+/* Global styles */
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+//mixins
+@mixin center($max-width, $width: 90%) {
+    width: $width;
+    max-width: $max-width;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin breakpoint($break) {
+    @if $break==large {
+        @media (min-width: $break-large) {
+            @content;
+        }
+    }
+
+    @else if $break==medium {
+        @media (min-width: $break-medium) {
+            @content;
+        }
+    }
+
+    @else if $break==small {
+        @media (min-width: $break-small) {
+            @content;
+        }
+    }
+
+    @else {
+        @media ($break) {
+            @content;
+        }
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background: $body-background;
+    font-family: $font-family-body;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    min-height: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $font-family-headings;
+}
