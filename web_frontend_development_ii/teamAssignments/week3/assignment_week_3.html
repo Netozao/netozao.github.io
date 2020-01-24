@@ -18,45 +18,95 @@
             This was borrowed from a free javascript course from Wes Bos Javascript30:
 
             CORE REQUIREMENTS
-                Open <a href="../week3/index-start.html">this first file</a> and complete exercises 1-5
+                Open <a href="../week3/index-start.html">this file</a> and complete exercises 1-5
             
             STRETCH GOALS:
                 Complete exercise #6
                 Complete exercise #7-8
-                Complete Array Cardio Day 2
-                Open <a href="../week3/index-start2.html">this second file</a> and complete the exercises
         </pre>
-        <h2>Solution:</h2>
-        <h3>Exercise # 1</h3>
+        <h2>Team Solution:</h2>
+        <pre>
+            Check solution below or see the js file <a href="../week3/solution.js">here</a>
+        </pre>
+        <h3>Exercise #1</h3>
+        <pre>
+            // 1. Filter the list of inventors for those who were born in the 1500's
 
+            let born1500 = inventors.filter(
+                inventor => inventor.year > 1499 && inventor.year < 1600 );
+                console.log(born1500);
+        </pre>
+        <h3>Exercise #2</h3>
+        <pre>
+            // 2. Give us an array of the inventors' first and last names
+        
+            let fullName = inventors.map(
+                inventor => inventor.first + " " + inventor.last
+            );
+            console.log(fullName);
+        </pre>
+        <h3>Exercise #3</h3>
+        <pre>
+            // 3. Sort the inventors by birthdate, oldest to youngest 
+            
+            let sortingByDate = inventors.sort(
+                (a, b) => a.year - b.year
+            );
+            console.log(sortingByDate);
+        </pre>
+        <h3>Exercise #4</h3>
+        <pre>
+            // 4. How many years did all the inventors live?
+            
+            let totalYears = inventors.reduce((total, inventor) => {
+                return total + (inventor.passed - inventor.year);
+            }, 0);
+            console.log('totalYears: ', totalYears);
+        </pre>
+        <h3>Exercise #5</h3>
+        <pre>
+            //5. Sort the inventors by years lived
 
-        <h3>Exercise # 2</h3>
-
-
-        <h3>Exercise # 3</h3>
-
-
-        <h3>Exercise # 4</h3>
-
-
-        <h3>Exercise # 5</h3>
-
-
-        <h3>Exercise # 6</h3>
-
-
-        <h3>Exercise # 7</h3>
-
-
-        <h3>Exercise # 8</h3>
-
-
-        <h3>Exercise Array Cardio Day 2</h3>
-
-
-        <h3>Extra File Exercises</h3>
+            let yearsLived = inventors.sort(
+                (a, b) => ((a.passed - a.year) - (b.passed - b.year)));
+            console.log(yearsLived);
+        </pre>
+        <h3>Exercise #6</h3>
+        <pre>
+            // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name - https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
+            
+            const category = document.querySelector('.mw-category');
+            const links = Array.from(category.querySelectorAll('a'));
+            const de = links.map(link => link.textContent).filter(streetName => streetName.includes('de'));
+        </pre>
+        <h3>Exercise #7</h3>
+        <pre>
+            // 7. sort Exercise - Sort the people alphabetically by last name
+            
+            const alpha = people.sort((lastOne, nextOne) => {
+                const [aLast, aFirst] = lastOne.split(', ');
+                const [bLast, bFirst] = nextOne.split(', ');
+                return aLast > bLast ? 1 : -1;
+            });
+            console.log(alpha);
+        </pre>
+        <h3>Exercise #8</h3>
+        <pre>
+        // 8. Reduce Exercise - // Sum up the instances of each of these
+        const dataTransport = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck', 'pogostick'];
+        
+        const transportation = dataTransport.reduce(function (obj, item) {
+            if (!obj[item]) {
+                obj[item] = 0;
+            }
+            obj[item]++;
+            return obj;
+            }, {});
+        console.log(transportation);
+        </pre>
     </main>
     <footer></footer>
+    <script src="../week3/solution.js"></script>
 </body>
 
 </html>
