@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>Tic Tac Toe</title>
+	<link rel="stylesheet" href="../week4/styles.css" />
+</head>
+
+<body>
+	<h3>Per instructions, this Tic-Tac-Toe is touch based</h3>
+	<table class="board">
+		<tr>
+			<td class="border" ontouchend="onTouch('a1')" id="a1"></td>
+			<td class="border" ontouchend="onTouch('a2')" id="a2"></td>
+			<td class="border" ontouchend="onTouch('a3')" id="a3"></td>
+		</tr>
+		<tr>
+			<td class="border" ontouchend="onTouch('a4')" id="a4"></td>
+			<td class="border" ontouchend="onTouch('a5')" id="a5"></td>
+			<td class="border" ontouchend="onTouch('a6')" id="a6"></td>
+		</tr>
+		<tr>
+			<td class="border" ontouchend="onTouch('a7')" id="a7"></td>
+			<td class="border" ontouchend="onTouch('a8')" id="a8"></td>
+			<td class="border" ontouchend="onTouch('a9')" id="a9"></td>
+		</tr>
+	</table>
+	<button ontouchend="resetBoard()" id="reset">Reset</button>
+	<script src="../week4/script.js"></script>
+</body>
+
+</html>

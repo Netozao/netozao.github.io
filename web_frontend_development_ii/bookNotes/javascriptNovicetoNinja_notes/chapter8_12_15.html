@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Javascript Novice to Ninja (Ch. 8, 12, and 15)</title>
+</head>
+
+<body>
+    <main>
+        <h2>Chapter 8</h2>
+        <h3>Input Types</h3>
+        <h4>Text Input</h4>
+        <form>
+            First name:<br>
+            <input type="text" name="firstname">
+            <br>
+            Last name:<br>
+            <input type="text" name="lastname">
+        </form>
+        <p>Note that the form itself is not visible.</p>
+        <p>Also note that the default width of a text input field is 20 characters.</p>
+        <hr>
+
+        <h4>Radio Buttons</h4>
+        <form>
+            <input type="radio" name="gender" value="male" checked> Male<br>
+            <input type="radio" name="gender" value="female"> Female<br>
+        </form>
+        <hr>
+
+        <h4>HTML Forms</h4>
+        <form action="/action_page.php">
+            First name:<br>
+            <input type="text" name="firstname" value="Mickey">
+            <br>
+            Last name:<br>
+            <input type="text" name="lastname" value="Mouse">
+            <br><br>
+            <input type="submit" value="Submit">
+        </form>
+        <p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
+        <hr>
+
+        <h4>Password field</h4>
+        <p>The <strong>input type="password"</strong> defines a password field:</p>
+        <form action="">
+            User name:<br>
+            <input type="text" name="userid">
+            <br>
+            User password:<br>
+            <input type="password" name="psw">
+        </form>
+        <p>The characters in a password field are masked (shown as asterisks or circles).</p>
+        <hr>
+
+        <h4>Reset Button</h4>
+        <p>The <strong>input type="reset"</strong> defines a reset button that will reset all form values to their
+            default
+            values:</p>
+        <form action="/action_page.php">
+            First name:<br>
+            <input type="text" name="firstname" value="Mickey">
+            <br>
+            Last name:<br>
+            <input type="text" name="lastname" value="Mouse">
+            <br><br>
+            <input type="submit" value="Submit">
+            <input type="reset">
+        </form>
+        <p>If you change the input values and then click the "Reset" button, the form-data will be reset to the
+            default
+            values.</p>
+        <hr>
+
+        <h4>Checkboxes</h4>
+        <p>The <strong>input type="checkbox"</strong> defines a checkbox:</p>
+
+        <form action="/action_page.php">
+            <input type="checkbox" name="vehicle1" value="Bike">I have a bike
+            <br>
+            <input type="checkbox" name="vehicle2" value="Car">I have a car
+            <br><br>
+            <input type="submit">
+        </form>
+        <hr>
+
+        <h4>Email Field</h4>
+        <p>The <strong>input type="email"</strong> is used for input fields that should contain an e-mail address:
+        </p>
+        <form action="/action_page.php">
+            E-mail:
+            <input type="email" name="email">
+            <input type="submit">
+        </form>
+        <p>
+            <b>Note:</b>type="email" is not supported in IE9 and earlier.</p>
+        <hr>
+
+        <h4>Number Field</h4>
+        <p>The <strong>input type="number"</strong> defines a numeric input field.</p>
+        <p>You can use the min and max attributes to add numeric restrictions in the input field:</p>
+        <form action="/action_page.php">
+            Quantity (between 1 and 5):
+            <input type="number" name="quantity" min="1" max="5">
+            <input type="submit">
+        </form>
+        <p><b>Note:</b> type="number" is not supported in IE9 and earlier.</p>
+        <hr>
+
+        <h4>URL Field</h4>
+        <p>The <strong>input type="url"</strong> is used for input fields that should contain a URL address:</p>
+        <form action="/action_page.php">
+            Add your homepage:
+            <input type="url" name="homepage">
+            <input type="submit">
+        </form>
+        <p><b>Note:</b>
+            The type="url" is not supported in IE9 and earlier versions.</p>
+
+        <h4>Others</h4>
+        <pre>
+        <input type="color">
+        <input type="date">
+        <input type="time">
+        <input type="datetime-local">
+        <input type="month">
+        <input type="week">
+        <input type="file">
+        <input type="number">
+        <input type="range">
+    </pre>
+        <hr>
+
+        <h3>Input Attributes</h3>
+        <h4>The maxlength Attribute</h4>
+        <p>The maxlength attribute specifies the maximum allowed length for the input field:</p>
+        <form action="">
+            First name:<br>
+            <input type="text" name="firstname" maxlength="10">
+            <br>
+            Last name:<br>
+            <input type="text" name="lastname">
+        </form>
+        <hr>
+
+        <h4>The list Attribute</h4>
+        <p>The list attribute refers to a datalist element that contains pre-defined options for an input element.
+        </p>
+        <form action="/action_page.php" method="get">
+            <input list="browsers" name="browser">
+            <datalist id="browsers">
+                <option value="Internet Explorer">
+                <option value="Firefox">
+                <option value="Chrome">
+                <option value="Opera">
+                <option value="Safari">
+            </datalist>
+            <input type="submit">
+        </form>
+        <p><b>Note:</b> The datalist tag is not supported in Internet Explorer 9 and earlier versions, or in Safari.
+        </p>
+        <hr>
+
+        <h4>The required Attribute</h4>
+        <p>The required attribute specifies that an input field must be filled out before submitting the form.</p>
+        <form action="/action_page.php">
+            Username: <input type="text" name="usrname" required>
+            <input type="submit">
+        </form>
+        <p><strong>Note:</strong> The required attribute of the input tag is not supported in Internet Explorer 9
+            and
+            earlier versions, or in Safari prior version 10.1.</p>
+        <hr>
+
+        <h4>Check Fields</h4>
+        <form onsubmit="return validate()" method="post">
+            Number: <input type="text" name="num1" id="num1" /><br />
+            Repeat: <input type="text" name="num2" id="num2" /><br />
+            <input type="submit" value="Submit" />
+        </form>
+        <hr>
+
+        <h2>Chapter 12</h2>
+        <p>Constructor functions</p>
+        <pre>
+            class Dice {
+                constructor(sides=6) {
+                this.sides = sides;
+            }
+                roll() {
+                    return Math.floor(this.sides * Math.random() + 1)
+                }
+        </pre>
+
+        <p>Using classes in JavaScript</p>
+        <pre>
+            class Hero {
+                constructor(name, level) {
+                    this.name = name;
+                    this.level = level;
+                }
+            }
+        </pre>
+
+        <p>Prototypes</p>
+        <pre>
+            function Student() {
+                this.name = 'John';
+                this.gender = 'M';
+            }
+            Student.prototype.age = 15;
+
+            var studObj1 = new Student();
+            alert(studObj1.age); // 15
+            var studObj2 = new Student();
+            alert(studObj2.age); // 15
+        </pre>
+
+        <p>Public and private methods</p>
+        <pre>
+            In the example that follows, the Turtle() class has been modified to include a private _color property:
+            class Turtle {
+                constructor(name,color) {
+                this.name = name;
+                let _color = color;
+                this.setColor = color => { return _color = color; }
+                this.getColor = () => _color;
+                }
+            }
+        </pre>
+
+
+
+        <p>Mixins</p>
+        <pre>
+            A mixin is a way of adding properties and methods of some objects to another object without using inheritance. 
+            It allows more complex objects to be created by ‘mixing’ basic objects together
+            for (const object of objects) {
+            if(typeof object === 'object') {
+                for (const key of Object.keys(object)) {
+                    if (typeof object[key] === 'object') {
+                        target[key] = Array.isArray(object[key]) ? [] : {};
+                        mixin(target[key],object[key]);
+                    } else {
+                        Object.assign(target,object);
+                    }
+                }
+                }
+            }
+            return target;
+            }
+
+            We can just mix in an object literal and add both properties at once:
+            mixin(wonderWoman,{ name: 'Wonder Woman', realName: 'Diana Prince' });
+            wonderWoman.change()            
+        </pre>
+
+        <p>This and that</p>
+        <pre>
+            superman.findFriends = function(){
+            const that = this;
+            this.friends.forEach(function(friend) {
+                console.log(`${friend.name} is friends with ${that.name}`);
+            });}
+        </pre>
+
+
+
+        <h2>Chapter 15</h2>
+        <p>Modular JavaScript - ES6</p>
+        <pre>
+            Exporting Modules - There is more than one way to export modules in ES6.
+            Include the keyword export in your function definition:
+            export function setName(name) { ... }
+
+            Include an export object with the properties you want to be included in the module.
+            function addResult() { ... }
+            function updateScoreboard() { ... }
+            export { addResult, updateScoreboard };
+
+            Import an entire module as scoreboard
+            import * as scoreboard from ‘./scoreboard.js’;
+
+            Import specific elements of a module
+            import { getName as getPlayerName, logPlayer } from ‘./player.js’;
+        </pre>
+
+
+    </main>
+</body>
+
+</html>
