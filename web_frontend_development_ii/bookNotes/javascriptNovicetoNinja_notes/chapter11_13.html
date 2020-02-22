@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Javascript Novice to Ninja (Ch. 11 and 13)</title>
+</head>
+
+<body>
+  <main>
+    <h3>Chapter 11</h3>
+    <h4>Further Functions</h4>
+    <p>Function properties and methods</p>
+    <pre>
+      We can create some objects that have a name property, then use the call() method to invoke the sayHello() function, providing each object as an argument.
+        function sayHello(){
+        return `Hello, my name is ${ this.name }`;
+        }
+        const clark = { name: 'Clark' };
+        sayHello.call(clark);
+    </pre>
+    <p>Immediately Invoked function expressions</p>
+    <pre>
+      (function(){const temp = 'World'; console.log(`Hello ${temp}`);})();
+      << 'Hello World'
+    </pre>
+     <p>Recursive functions</p>
+    <pre>
+      A recursive function is one that invokes itself until a certain condition is met:
+        function factorial(n) {
+        if (n === 0) {
+        return 1;
+        } else {
+        return n * factorial(n - 1);
+        }
+        }
+    </pre>
+    <p>Callbacks</p>
+    <pre>
+      Functions passed to other functions as arguments and then invoked inside the function they are passed to:
+        function wait(message, callback, seconds){
+        setTimeout(callback,seconds * 1000);
+        console.log(message);
+        }
+
+        function selfDestruct(){
+        console.log('BOOOOM!');
+        }
+
+        wait('This tape will self-destruct in five seconds ... ', selfDestruct, 5);
+        console.log('Hmmm, should I accept this mission or not ...?');
+          << 'This tape will self-destruct in five seconds ... '
+          << 'Hmmm, should I accept this mission or not ... ? '
+          << 'BOOOOM!'
+    </pre>
+    <p>Promises</p>
+    <pre>
+      A promise represents the future result of an asynchronous operation:
+        const dice = {
+        sides: 6,
+        roll() {
+        return Math.floor(this.sides * Math.random()) + 1;
+          }
+        }
+        const promise = new Promise( (resolve,reject) => {
+        const n = dice.roll();
+        setTimeout(() => {
+        (n > 1) ? resolve(n) : reject(n);
+        }, n*1000);
+        });
+
+    </pre>
+    <p>Async functions</p>
+    <pre>
+      These functions are preceded by the async keyword and allow you to write asynchronous code as if it was synchronous.
+
+    </pre>
+    <p>Functions that return functions</p>
+    <pre>
+      function returnHello() {
+      console.log('returnHello() called');
+      return function() {
+      console.log('Hello World!');
+      }
+      }
+    </pre>
+    <p>Introduction to functional programming</p>
+    <pre>
+      A key aspect of functional programming is its use of pure functions. A pure function is a function that adheres to the following rules:
+      1) The return value of a pure function should only depend on the values provided as arguments. It doesn’t rely on values from somewhere else in the program.
+      2) There are no side-effects. A pure function doesn’t change any values or data elsewhere in the program. It only makes non-destructive data transformations and returns new values, rather than altering any of the underlying data.
+      3) Referential transparency. Given the same arguments, a pure function will always return the same result.
+
+    </pre>
+    <p>Currying</p>
+    <pre>
+      function multiplier(x,y) {
+      if (y === undefined) {
+      return function(z) {
+      return x * z;
+      }
+      } else {
+      return x * y;
+      }
+      }
+    </pre>
+    <h3>Chapter 13</h3>
+    <h4>Ajax</h4>
+    <p>Communicating with the server using the Fetch API</p>
+    <pre>
+      Simple example:
+        fetch('https://example.com/data')
+        .then( // code that handles the response )
+        .catch( // code that runs if the server returns an error )
+
+      Check if the request was successful:
+        const url = 'https:example.com/data';
+        fetch(url)
+        .then((response) => {
+        if(response.ok) {
+        return response;
+        }
+        throw Error(response.statusText);
+        })
+        .then( response => // do something with response )
+        .catch( error => console.log('There was an error!') )
+
+      Redirect:
+        fetch(url)
+        .then( response => response.redirect(newURL)); //redirects to another URL
+        512 JavaScript: Novice to Ninja, 2nd Edition
+        .then( // do something else )
+        .catch( error => console.log('There was an error: ', error))
+
+      Text response:
+        fetch(url)
+        .then( response => response.text() ); // transforms the text stream into a JavaScript string
+        .then( text => console.log(text) )
+        .catch( error => console.log('There was an error: ', error))
+
+      File Responses - The blob() method is used to read a file of raw data:
+        fetch(url)
+        .then( response => response.blob() ); // transforms the data into a blob object
+        .then( blob => console.log(blob.type) )
+        .catch( error => console.log('There was an error: ', error))
+
+      A Headers object includes the following properties and methods:
+        has() – Can be used to check if the headers object contains the header provided as an argument.
+        get() - Returns the value of the header provided as an argument
+        set() – Can be used to set a value of an already existing header, or create a new header with the value provided as an argument if it does not already exist.
+        append() – Adds a new header to the headers object.
+        delete() – Removes the header provided as an argument.
+        keys(), values() and entries() – Iterators that can be used to iterate over the headers key, values or entries (key and value pairs).
+
+      All together:
+        const url = 'https:example.com/data';
+        const headers = new Headers({ 'Content-Type': 'text/plain', 'Accept-Charset' : 'utf-8', 'Accept-Encoding':'gzip,deflate'})
+        const request = (url,{
+        headers: headers
+        })
+        fetch(request)
+        .then( function(response) {
+        if(response.ok) {
+        return response;
+        }
+        throw Error(response.statusText);
+        })
+        .then( response => // do something with response )
+        .catch( error => console.log('There was an error!') )
+    </pre>
+    <p>Form data</p>
+    <pre>
+    How to create a new FormData instance using the FormData() constructor function and provide the form as an argument:
+      const form = document.forms['todo'];
+      form.addEventListener('submit', addTask, false);
+      function addTask(event) {
+        event.preventDefault();
+        const task = new FormData(form);
+        const url = `http://echo.jsontest.com/id/1/title/${form.task.value}`;
+        const headers = new Headers({
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        });
+        const request = new Request(url,
+        {
+          method: 'POST',
+          mode: 'cors',
+          header: headers,
+          body: JSON.stringify(task)
+        }
+        )
+        fetch(request)
+        .then( response => response.json() )
+        .then( data => console.log(`${data.title} saved with an id of ${data.id}`) )
+        .catch( error => console.log('There was an error:', error))
+      }
+    </pre>
+  </main>
+</body>
+
+</html>
