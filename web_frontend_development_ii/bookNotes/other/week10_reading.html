@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MDN Reading</title>
+</head>
+
+<body>
+    <main>
+        <h3>Client-side form validation</h3>
+        <h4>Built-in form validation</h4>
+        <p> </p>
+        <pre>
+            - required: Specifies whether a form field needs to be filled in before the form can be submitted.
+            - minlength and maxlength: Specifies the minimum and maximum length of textual data (strings)
+            - min and max: Specifies the minimum and maximum values of numerical input types
+            - type: Specifies whether the data needs to be a number, an email address, or some other specific preset type.
+            - pattern: Specifies a regular expression that defines a pattern the entered data needs to follow.
+        </pre>
+
+        <h4>Validating against a regular expression</h4>
+        <p>Regex examples</p>
+        <pre>
+            a — Matches one character that is a (not b, not aa, and so on).
+            abc — Matches a, followed by b, followed by c.
+            ab?c—Matches a, optionally followed by a single b, followed by c. ( ac or abc)
+            ab*c—Matches a, optionally followed by any number of bs, followed by c. ( ac , abc, abbbbbc, and so on).
+            a|b — Matches one character that is a or b.
+            abc|xyz — Matches exactly abc or exactly xyz (but not abcxyz or a or y, and so on).
+        </pre>
+
+        <h4>CSS Example</h4>
+        <pre>
+            form {
+            font: 1em sans-serif;
+            max-width: 320px;
+            }
+
+            p > label {
+            display: block;
+            }
+
+            input[type="text"],
+            input[type="email"],
+            input[type="number"],
+            textarea,
+            fieldset {
+            width : 100%;
+            border: 1px solid #333;
+            box-sizing: border-box;
+            }
+
+            input:invalid {
+            box-shadow: 0 0 5px 1px red;
+            }
+
+            input:focus:invalid {
+            box-shadow: none;
+            }
+        </pre>
+
+        <h4>Validating forms using JavaScript</h4>
+        <pre>
+            HTMLButtonElement (represents a button element)
+            HTMLFieldSetElement (represents a fieldset element)
+            HTMLInputElement (represents an input element)
+            HTMLOutputElement (represents an output element)
+            HTMLSelectElement (represents a select element)
+            HTMLTextAreaElement (represents a textarea element)
+        </pre>
+
+        <h4>JS example</h4>
+        <pre>
+            // There are many ways to pick a DOM node; here we get the form itself and the email
+            // input box, as well as the span element into which we will place the error message.
+            // const form = document.getElementsByTagName('form')[0];
+
+            const email = document.getElementById('mail');
+            const emailError = document.querySelector('#mail + span.error');
+
+            email.addEventListener('input', function (event) {
+            // Each time the user types something, we check if the
+            // form fields are valid.
+
+            if (email.validity.valid) {
+            // In case there is an error message visible, if the field
+            // is valid, we remove the error message.
+            emailError.innerHTML = ''; // Reset the content of the message
+            emailError.className = 'error'; // Reset the visual state of the message
+            } else {
+            // If there is still an error, show the correct error
+            showError();
+            }
+            });
+
+            form.addEventListener('submit', function (event) {
+            // if the email field is valid, we let the form submit
+
+            if(!email.validity.valid) {
+            // If it isn't, we display an appropriate error message
+            showError();
+            // Then we prevent the form from being sent by canceling the event
+            event.preventDefault();
+            }
+            });
+
+            function showError() {
+            if(email.validity.valueMissing) {
+            // If the field is empty
+            // display the following error message.
+            emailError.textContent = 'You need to enter an e-mail address.';
+            } else if(email.validity.typeMismatch) {
+            // If the field doesn't contain an email address
+            // display the following error message.
+            emailError.textContent = 'Entered value needs to be an e-mail address.';
+            } else if(email.validity.tooShort) {
+            // If the data is too short
+            // display the following error message.
+            emailError.textContent = `Email should be at least ${ email.minLength } characters; you entered ${
+            email.value.length }.`;
+            }
+
+            // Set the styling appropriately
+            emailError.className = 'error active';
+            }
+        </pre>
+
+        <h3>Using Fetch</h3>
+        <h4>Basic Fetch example</h4>
+        <pre>
+            fetch('http://example.com/movies.json')
+            .then((response) => {
+            return response.json();
+            })
+            .then((data) => {
+            console.log(data);
+            });
+        </pre>
+
+        <h4>Fetch with more options</h4>
+        <pre>
+            // Example POST method implementation:
+            async function postData(url = '', data = {}) {
+            // Default options are marked with *
+            const response = await fetch(url, {
+            method: 'POST', // *GET, POST, PUT, DELETE, etc.
+            mode: 'cors', // no-cors, *cors, same-origin
+            cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+            credentials: 'same-origin', // include, *same-origin, omit
+            headers: {
+            'Content-Type': 'application/json'
+            // 'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            redirect: 'follow', // manual, *follow, error
+            referrerPolicy: 'no-referrer', // no-referrer, *client
+            body: JSON.stringify(data) // body data type must match "Content-Type" header
+            });
+            return await response.json(); // parses JSON response into native JavaScript objects
+            }
+
+            postData('https://example.com/answer', { answer: 42 })
+            .then((data) => {
+            console.log(data); // JSON data parsed by `response.json()` call
+            });
+        </pre>
+
+        <h4>Uploading Json data</h4>
+        <pre>
+            const data = { username: 'example' };
+
+            fetch('https://example.com/profile', {
+            method: 'POST', // or 'PUT'
+            headers: {
+            'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+            })
+            .then((response) => response.json())
+            .then((data) => {
+            console.log('Success:', data);
+            })
+            .catch((error) => {
+            console.error('Error:', error);
+            });
+        </pre>
+
+        <h4>Checking that the fetch was succesful</h4>
+        <pre>
+            fetch('flowers.jpg')
+            .then((response) => {
+            if (!response.ok) {
+            throw new Error('Network response was not ok');
+            }
+            return response.blob();
+            })
+            .then((myBlob) => {
+            myImage.src = URL.createObjectURL(myBlob);
+            })
+            .catch((error) => {
+            console.error('There has been a problem with your fetch operation:', error);
+            });
+        </pre>
+
+        <h4>Response objects</h4>
+        <pre>
+            The most common response properties you'll use are:
+
+            Response.status — An integer (default value 200) containing the response status code.
+            Response.statusText — A string (default value "OK"), which corresponds to the HTTP status code message.
+            Response.ok — seen in use above, this is a shorthand for checking that status is in the range 200-299
+            inclusive. This returns a Boolean.
+        </pre>
+    </main>
+</body>
+
+</html>
