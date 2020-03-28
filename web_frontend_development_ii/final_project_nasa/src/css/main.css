@@ -1,0 +1,199 @@
+*,
+body {
+  font-family: cursive,
+    Arial,
+    sans-serif;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 760px;
+}
+
+header img {
+
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 760px;
+}
+
+iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+nav {
+  margin: 0 auto;
+  background-color: #31323A;
+}
+
+header div img {
+  width: 300px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+#welcome {
+  padding: 1rem;
+}
+
+.navigation {
+  list-style: none;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 0;
+}
+
+.navigation li:first-child {
+  display: block;
+}
+
+.navigation li {
+  display: none;
+  align-self: center;
+}
+
+.navigation a {
+  display: block;
+  padding: 0.75rem;
+  text-align: center;
+  text-decoration: none;
+}
+
+.navigation a:hover {
+  color: #31323A;
+  background-color: white;
+  font-weight: 700;
+}
+
+.responsive li {
+  display: block;
+}
+
+.blue {
+  color: #299BFF;
+}
+
+.green {
+  color: #16FF6E;
+}
+
+.active {
+  background-color: white;
+  color: black;
+  font-weight: 700;
+}
+
+h1,
+h2,
+h3 {
+  text-align: center;
+  font-family: 'Londrina Shadow', Arial, sans-serif;
+}
+
+p {
+  font-family: cursive, Arial, sans-serif;
+}
+
+footer {
+  background-color: #31323A;
+  text-align: center;
+  margin: 0px;
+  padding: 8px;
+  color: #16FF6E;
+}
+
+#responseImg {
+  width: 100%;
+  max-width: 100%;
+}
+
+#responseVideo {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 25px;
+  height: 0;
+}
+
+#responseCopyright {
+  font-size: 12px;
+
+}
+
+footer p {
+  margin: 5px;
+}
+
+.buttons {
+  display: flex;
+}
+
+@media only screen and (min-width: 550px) {
+  .navigation {
+    display: flex;
+  }
+
+  .navigation li:first-child {
+    display: none;
+  }
+
+  .navigation li {
+    display: block;
+    flex: 1 1 100%;
+  }
+
+  header img {
+    width: 760px;
+
+  }
+
+  section {
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  footer {
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .navigation {
+    text-transform: uppercase;
+  }
+}
+
+.btn {
+  background-color: #31323A;
+  color: #16FF6E;
+  padding: 0.75rem;
+  cursor: pointer;
+  position: relative;
+  top: 50%;
+  width: auto;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: white(0, 0, 0, 0.8);
+  color: #31323A;
+}
+
+#lastModified {
+  font-size: 14px;
+}
+
+#responseDesc {
+  padding: 1rem;
+}

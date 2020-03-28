@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <base href="./">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="src/css/main.css" type="text/css">
+  <link href="favicon.ico" rel="icon" type="image/x-icon" />
+</head>
+
+<body>
+  <header>
+    <header>
+      <img class="header-img" src="./src/images/banner.jpg" alt="Star Banner">
+      <div id="welcome">
+        <h3>PICTURE OF THE DAY</h3>
+        <p>Each day a different image of our fascinating universe, along with an explanation written by an astronomer.
+        </p>
+      </div>
+      <nav>
+        <ul class="navigation">
+          <li><a href="#" class="green" onclick="toggleMenu()">☰ SELECT A DAY</a></li>
+          <li><a href="#" class="green" id="btnToday">Today</a></li>
+          <li><a href="#" class="green" id="btnRandom">Give me Random</a></li>
+          <li> <a href="#" class="green" id="btnDate">
+              <form>
+                <label class="nativeDatePicker">Pick a Date:
+                  <input id="datefield" type='date' min='2000-01-01' max='2000-13-13'></input>
+                  <span class="validity"></span>
+                </label>
+                <fieldset id="fallbackDatePicker" class="fallbackDatePicker" hidden>
+                  <label>Day: <select name="day" id="day"></select></label>
+                  <label>Month:
+                    <select id="month" name="month">
+                      <option>January</option>
+                      <option>February</option>
+                      <option>March</option>
+                      <option>April</option>
+                      <option>May</option>
+                      <option>June</option>
+                      <option>July</option>
+                      <option>August</option>
+                      <option>September</option>
+                      <option>October</option>
+                      <option>November</option>
+                      <option>December</option>
+                    </select>
+                  </label>
+                  <label>Year:<select name="year" id="year2"></select></label>
+                </fieldset>
+              </form>
+            </a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <br>
+      <h3 id="responseTitle"></h3>
+      <img id="responseImg">
+      <div class="video" id="responseVideo">
+        <iframe frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div id="responseCopyright"></div>
+      <br>
+      <div class="buttons">
+        <a class="btn" id="prevBtn">&#10094;</a>
+        <span class="btn" id="responseDate"></span>
+        <a class="btn" id="nextBtn">&#10095;</a>
+      </div>
+      <br>
+      <div id="responseDesc"></div>
+      <br>
+    </main>
+    <footer>
+
+      <p>&copy; <span id="year"></span>
+        | Andre Neto
+        | <a href="https://www.linkedin.com/in/andre-fernando-neto/" target="_blank">Linkedin</a>
+        | <a href="https://www.github.com/netozao" target="_blank">GitHub</a></p>
+      <p>NASA Astronomy Picture of the Day API</p>
+      <p id="lastModified"></p>
+      <script src="./src/js/main.js"></script>
+      <script src="./src/js/webChanged.js"></script>
+    </footer>
+</body>
+
+</html>
